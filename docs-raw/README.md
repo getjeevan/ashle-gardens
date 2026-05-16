@@ -17,9 +17,10 @@ become skilled entrepreneurs through a live-work-research Centre of Excellence.
 5. **Biochar Production** — farm biomass → soil amendment + carbon credits + exports
 6. **Biogas Plant** — organic waste → kitchen fuel + electricity offset
 7. **Organic Farm** — zero-mile produce for kitchen + members + CSA subscriptions
-8. **COE (Centre of Excellence)** — ITI/Polytechnic students, rural youth, R&D
+8. **COE (Centre of Excellence)** — Pro bono innovation residency for brilliant young minds. They solve real problems for Ashle Gardens portfolio. No stipend — they get free stay, meals, mentorship, ₹50K prototype budget, and the right to commercialise their solution.
 9. **Ayurveda Spa & Wellness** — retreat programs, day spa, naturopathy
-10. **NRI Concierge Services** — return-to-India advisory, property management, admin
+10. **NRI Concierge Services**
+11. **Co-working & Research Residency** — stay-and-work for entrepreneurs, research scholars, remote workers. Short-term and monthly options. — return-to-India advisory, property management, admin
 
 ## Workspace structure
 - `docs/` — vision, market research, regulatory, related businesses
