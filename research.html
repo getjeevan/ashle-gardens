@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Ashle Gardens — Research Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --bg:#0c1a0e;--surface:#132016;--surface2:#1a2c1c;
+      --border:rgba(255,255,255,0.07);--text:#e8f0e6;
+      --muted:#7a9878;--gold:#c8a84a;--green:#5aab5a;--accent:#3a8c3d;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;min-height:100vh}
+    nav{position:sticky;top:0;z-index:100;background:rgba(12,26,14,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px;}
+    .nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.3rem;letter-spacing:3px;color:var(--gold);text-decoration:none;text-transform:uppercase}
+    .nav-links{display:flex;gap:24px}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--text)}
+
+    .page-hero{padding:60px 40px 40px;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0a150c 0%,var(--bg) 100%)}
+    .page-label{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+    .page-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--gold);letter-spacing:2px;margin-bottom:12px}
+    .page-sub{font-size:.9rem;color:var(--muted);max-width:600px;line-height:1.8}
+    .stats{display:flex;gap:32px;margin-top:24px;flex-wrap:wrap}
+    .stat{display:flex;flex-direction:column;gap:2px}
+    .stat-val{font-size:1.6rem;font-family:'JetBrains Mono',monospace;color:var(--green)}
+    .stat-label{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+
+    main{padding:40px;max-width:1300px;margin:0 auto}
+
+    .domain{margin-bottom:48px}
+    .domain-hd{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+    .domain-icon{font-size:1.4rem}
+    .domain-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold);letter-spacing:2px;text-transform:uppercase}
+    .domain-count{font-size:.68rem;font-family:'JetBrains Mono',monospace;color:var(--accent);background:rgba(58,140,61,.1);border:1px solid rgba(58,140,61,.25);padding:2px 10px;border-radius:10px}
+
+    .doc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+    .doc-card{
+      background:var(--surface);border:1px solid var(--border);border-radius:10px;
+      padding:18px 20px;transition:border-color .2s,transform .15s;
+      text-decoration:none;display:block;
+    }
+    .doc-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .doc-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px}
+    .doc-title{font-size:.88rem;color:var(--text);font-weight:500;line-height:1.4}
+    .doc-lines{font-size:.68rem;font-family:'JetBrains Mono',monospace;color:var(--accent);white-space:nowrap}
+    .doc-desc{font-size:.75rem;color:var(--muted);line-height:1.6}
+    .doc-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+    .tag{font-size:.6rem;padding:2px 7px;border-radius:8px;background:rgba(58,140,61,.08);border:1px solid rgba(58,140,61,.2);color:var(--green);font-family:'JetBrains Mono',monospace}
+    .tag.gold{background:rgba(200,168,74,.08);border-color:rgba(200,168,74,.2);color:var(--gold)}
+
+    .wip-card{opacity:.5;cursor:default}
+    .wip-card:hover{transform:none;border-color:var(--border)}
+    .wip-badge{font-size:.6rem;padding:2px 7px;border-radius:8px;background:rgba(122,152,120,.08);border:1px solid rgba(122,152,120,.2);color:var(--muted);font-family:'JetBrains Mono',monospace}
+
+    footer{text-align:center;padding:32px;color:var(--muted);font-size:.72rem;letter-spacing:1px;border-top:1px solid var(--border);background:var(--surface);margin-top:40px}
+    footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border)}
+
+    @media(max-width:700px){nav{padding:0 16px}.page-hero,.main{padding:32px 16px}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">Ashle Gardens</a>
+  <div class="nav-links">
+    <a href="index.html">Overview</a>
+    <a href="research.html" class="active">Research</a>
+    <a href="index.html#visuals">Visuals</a>
+    <a href="index.html#site">Site</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-label">Internal Research Library</div>
+  <h1 class="page-title">Ashle Gardens Research</h1>
+  <p class="page-sub">Ongoing research across all 10 business units — regulatory approvals, financial models, market sizing, site design, circular economy, branding and NRI sales. All documents are generated by the 10 specialist AI agents and reviewed by the founder.</p>
+  <div class="stats">
+    <div class="stat"><span class="stat-val" id="doc-count">22</span><span class="stat-label">Research docs</span></div>
+    <div class="stat"><span class="stat-val" id="line-count">8,400+</span><span class="stat-label">Lines of research</span></div>
+    <div class="stat"><span class="stat-val">10</span><span class="stat-label">Specialist agents</span></div>
+    <div class="stat"><span class="stat-val">Wave 1</span><span class="stat-label">Current phase</span></div>
+  </div>
+</div>
+
+<main>
+
+  <!-- REGULATORY & LEGAL -->
+  <div class="domain">
+    <div class="domain-hd">
+      <span class="domain-icon">🏛️</span>
+      <span class="domain-name">Regulatory & Legal</span>
+      <span class="domain-count">6 docs</span>
+    </div>
+    <div class="doc-grid">
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/20-regulatory/01-approvals-master-list.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Approvals Master List</span><span class="doc-lines">459 lines</span></div>
+        <p class="doc-desc">Every approval needed in priority order — Kariapatti Tahsildar, DTCP Virudhunagar, TNPCB, AAI NOC (12.7km from IXM), TNRERA, fire NOC. Timeline, fee, documents per step.</p>
+        <div class="doc-tags"><span class="tag">Rajan-Anna</span><span class="tag gold">Virudhunagar</span><span class="tag">priority-1</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/20-regulatory/02-schemes-and-subsidies.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Schemes & Subsidies</span><span class="doc-lines">549 lines</span></div>
+        <p class="doc-desc">All applicable central and TN state schemes: NPHCE, IPOP, Tourism grants, Guidance TN, DIC Virudhunagar MSME loan, TIDCO, NSDC, CM Kaushal Pattarai.</p>
+        <div class="doc-tags"><span class="tag">Rajan-Anna</span><span class="tag gold">grants</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/20-regulatory/04-nri-buyer-handbook.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">NRI Buyer Handbook</span><span class="doc-lines">in progress</span></div>
+        <p class="doc-desc">FEMA rules for NRI purchase, NRO/NRE accounts, repatriation up to USD 1M/year, POA for absentee registration, inheritance rules, GST implications.</p>
+        <div class="doc-tags"><span class="tag">Meenakshi</span><span class="tag gold">FEMA</span><span class="tag">NRI</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/20-regulatory/05-entity-structure-advice.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Entity Structure</span><span class="doc-lines">in progress</span></div>
+        <p class="doc-desc">Multi-entity ownership chart: Pvt Ltd for campus (NRI FDI 100%), Section 8 for COE (CSR+80G), optional FPO for farm. Incorporation steps, costs, timeline.</p>
+        <div class="doc-tags"><span class="tag">Meenakshi</span><span class="tag gold">corporate</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/20-regulatory/06-land-conversion-virudhunagar.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Land Conversion Guide</span><span class="doc-lines">in progress</span></div>
+        <p class="doc-desc">J-farm Kariapatti: Section 27/28 TN Land Reforms Act, application to Kariapatti Tahsildar → Virudhunagar Collector, fee, timeline, documents, common pitfalls.</p>
+        <div class="doc-tags"><span class="tag">Meenakshi</span><span class="tag gold">Kariapatti</span><span class="tag">land</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/20-regulatory/07-tnrera-registration.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">TNRERA Registration</span><span class="doc-lines">in progress</span></div>
+        <p class="doc-desc">When it triggers (>500 sqm or >8 units), portal steps, CA certificate, 70% escrow rule, penalty for non-compliance, timeline for retirement units.</p>
+        <div class="doc-tags"><span class="tag">Meenakshi</span><span class="tag gold">RERA</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- FINANCIALS -->
+  <div class="domain">
+    <div class="domain-hd"><span class="domain-icon">💼</span><span class="domain-name">Finance & Investment</span><span class="domain-count">4 docs</span></div>
+    <div class="doc-grid">
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/financials/01-integrated-capex-phased.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">5-Year Phased CAPEX</span><span class="doc-lines">195 lines</span></div>
+        <p class="doc-desc">₹55 Cr total: Phase 1 ₹16.5Cr (Y1-2 core + laundry + kitchen + biogas), Phase 2 ₹20.2Cr (Y3-4 COE + eco-tourism + biochar), Phase 3 ₹14.8Cr (Y5 expansion).</p>
+        <div class="doc-tags"><span class="tag">Karthik</span><span class="tag gold">₹55 Cr</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/financials/02-unit-economics-per-BU.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Unit Economics (10 BUs)</span><span class="doc-lines">463 lines</span></div>
+        <p class="doc-desc">Revenue model, OPEX, gross margin %, EBITDA %, payback period for each of the 10 business units. Circular economy savings quantified.</p>
+        <div class="doc-tags"><span class="tag">Karthik</span><span class="tag gold">P&L</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/financials/03-nri-investor-deck-outline.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">NRI Investor Deck</span><span class="doc-lines">in progress</span></div>
+        <p class="doc-desc">12-slide pitch deck outline for Tamil diaspora investors: vision, problem, solution, business model, financials, OCD investment structure, call to action.</p>
+        <div class="doc-tags"><span class="tag">Karthik</span><span class="tag gold">NRI</span><span class="tag">pitch</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/financials/04-funding-sources.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Funding Sources</span><span class="doc-lines">in progress</span></div>
+        <p class="doc-desc">All funding options: DIC MSME loans, NABARD, Tourism grants, NSDC for COE, NRI OCD structure, CSR from Sivakasi companies and Madurai mills.</p>
+        <div class="doc-tags"><span class="tag">Karthik</span><span class="tag gold">grants</span><span class="tag">loans</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- BRAND & MARKET -->
+  <div class="domain">
+    <div class="domain-hd"><span class="domain-icon">📣</span><span class="domain-name">Brand, NRI Sales & Market Research</span><span class="domain-count">4 docs</span></div>
+    <div class="doc-grid">
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/00-vision/01-brand-book.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Brand Book</span><span class="doc-lines">600 lines</span></div>
+        <p class="doc-desc">Ashle Gardens brand guide: name, tagline options, colour palette (gold #C8A84A, green #0C1A0E), typography, tone of voice, photography style, DOs and DON'Ts.</p>
+        <div class="doc-tags"><span class="tag">Priya</span><span class="tag gold">brand</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/research/demographics/01-nri-diaspora-profile.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">NRI Diaspora Profile</span><span class="doc-lines">427 lines</span></div>
+        <p class="doc-desc">Tamil diaspora by country (US, SG, UAE, UK, Canada, Malaysia, Australia): population, wealth bands, retirement intent, pain points, best marketing channels.</p>
+        <div class="doc-tags"><span class="tag">Priya</span><span class="tag gold">NRI</span><span class="tag">demographics</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/research/competitors/01-competitor-analysis.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Competitor Analysis</span><span class="doc-lines">528 lines</span></div>
+        <p class="doc-desc">Athulya, Antara, Covai Care, Serene Life, Columbia Pacific: pricing, positioning, target segment, strengths, and gaps Ashle Gardens fills.</p>
+        <div class="doc-tags"><span class="tag">Priya</span><span class="tag gold">market</span></div>
+      </a>
+      <div class="doc-card wip-card">
+        <div class="doc-card-top"><span class="doc-title">NRI Sales Funnel</span><span class="wip-badge">queued</span></div>
+        <p class="doc-desc">18-month NRI sales process with content calendar, WhatsApp nurture sequence, site visit conversion playbook.</p>
+        <div class="doc-tags"><span class="tag">Priya</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE & ENVIRONMENT -->
+  <div class="domain">
+    <div class="domain-hd"><span class="domain-icon">🌳</span><span class="domain-name">Site, Design & Environment</span><span class="domain-count">5 docs</span></div>
+    <div class="doc-grid">
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/plans/site-research/01-climate-summary.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Climate Summary</span><span class="doc-lines">288 lines</span></div>
+        <p class="doc-desc">Monthly climate tables for 9.7212°N 78.0852°E: temp, rainfall, ET, humidity. Soil classification BSh semi-arid. Hydrology. Water table. Vegetation zones.</p>
+        <div class="doc-tags"><span class="tag">Dr. Meera</span><span class="tag gold">Kariapatti</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/plans/site-research/05-biogas-design.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Biogas Plant Design</span><span class="doc-lines">402 lines</span></div>
+        <p class="doc-desc">25 m³ floating-drum digester: 200 kg/day feedstock → 16-20 m³ biogas → ₹1,200-1,800/day savings. MNRE subsidy, piping layout, digestate reuse plan.</p>
+        <div class="doc-tags"><span class="tag">Velu</span><span class="tag gold">MNRE subsidy</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/plans/site-research/02-water-budget.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Water Budget</span><span class="doc-lines">in progress</span></div>
+        <p class="doc-desc">Annual water balance: rainfall harvest, borewell, occupancy demand (100 residents), kitchen, laundry, lake evaporation, farm drip. Month-by-month surplus/deficit.</p>
+        <div class="doc-tags"><span class="tag">Dr. Meera</span><span class="tag gold">water</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/plans/site-research/06-biochar-production-plan.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Biochar Production Plan</span><span class="doc-lines">in progress</span></div>
+        <p class="doc-desc">Adam retort kiln, local feedstock sources, 300-500 kg/day output, revenue at ₹15-35/kg, IBI certification, Verra VCS carbon credits, export via Thoothukudi.</p>
+        <div class="doc-tags"><span class="tag">Velu</span><span class="tag gold">carbon credits</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/plans/site-research/07-farm-design.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">15-Acre Farm Design</span><span class="doc-lines">in progress</span></div>
+        <p class="doc-desc">Zone-by-zone layout: kitchen garden, vegetables, orchard (mango/jackfruit/moringa), Seeraga Samba paddy, fodder, nursery. Soil building with biochar + digestate.</p>
+        <div class="doc-tags"><span class="tag">Velu</span><span class="tag gold">zero-mile</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- BUSINESSES -->
+  <div class="domain">
+    <div class="domain-hd"><span class="domain-icon">🏢</span><span class="domain-name">Commercial Operations</span><span class="domain-count">7 docs</span></div>
+    <div class="doc-grid">
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/30-related-businesses/laundry/01-market-sizing.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Laundry: Market Sizing</span><span class="doc-lines">226 lines</span></div>
+        <p class="doc-desc">Madurai hospital linen TAM (50+ hospitals, 15,000+ beds), hotel market (200+ rooms), Sivakasi industrial workwear. Total market in kg/day and ₹/year.</p>
+        <div class="doc-tags"><span class="tag">Anbu</span><span class="tag gold">TAM</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/30-related-businesses/laundry/02-equipment-spec.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Laundry: Equipment Spec</span><span class="doc-lines">426 lines</span></div>
+        <p class="doc-desc">2,000 kg/day capacity plant: batch washers, dryers, flatwork ironer, tunnel finisher, RFID system, RO water recycling. CAPEX breakdown by machine.</p>
+        <div class="doc-tags"><span class="tag">Anbu</span><span class="tag gold">CAPEX</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/30-related-businesses/kitchen/01-fssai-license-plan.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Kitchen: FSSAI License Plan</span><span class="doc-lines">344 lines</span></div>
+        <p class="doc-desc">FoSCoS portal, Central License for >₹12Cr turnover, HACCP 7-principles outline, hospital dietary NABH compliance, timeline 30-45 days, fee ₹7,500/year.</p>
+        <div class="doc-tags"><span class="tag">Chef Selvi</span><span class="tag gold">FSSAI</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/30-related-businesses/kitchen/02-kitchen-layout-spec.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Kitchen: Layout & Equipment</span><span class="doc-lines">402 lines</span></div>
+        <p class="doc-desc">6 zones for 1,500 meals/day: receiving, cold storage, prep, cooking line, roti station, plating, wash. Equipment per zone, CAPEX ₹85L-1.1Cr total.</p>
+        <div class="doc-tags"><span class="tag">Chef Selvi</span><span class="tag gold">CAPEX</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/30-related-businesses/ecotourism/01-experience-catalogue.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Eco-tourism: Experience Catalogue</span><span class="doc-lines">344 lines</span></div>
+        <p class="doc-desc">8+ experiences: heritage walks, farm immersions, MICE corporate programs, school science days, island retreat, capsule Airbnb packages. Pricing and margins.</p>
+        <div class="doc-tags"><span class="tag">Deepa</span><span class="tag gold">revenue</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/30-related-businesses/ecotourism/02-tn-tourism-registration.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Eco-tourism: TN Registration</span><span class="doc-lines">586 lines</span></div>
+        <p class="doc-desc">Heritage Homestay classification, eco-tourism operator registration, MICE venue approval, Swadesh Darshan 2.0 grant eligibility. Timeline and documents.</p>
+        <div class="doc-tags"><span class="tag">Deepa</span><span class="tag gold">TN Tourism</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/30-related-businesses/ecotourism/03-mice-pitch.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">Eco-tourism: MICE Pitch</span><span class="doc-lines">524 lines</span></div>
+        <p class="doc-desc">Corporate MICE 1-pager targeting Madurai/Chennai/Bengaluru IT companies and Sivakasi industries. Venue capacity, experience menu, pricing, USP vs Ooty/Kodaikanal.</p>
+        <div class="doc-tags"><span class="tag">Deepa</span><span class="tag gold">B2B</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- COE -->
+  <div class="domain">
+    <div class="domain-hd"><span class="domain-icon">🎓</span><span class="domain-name">Centre of Excellence</span><span class="domain-count">3 docs</span></div>
+    <div class="doc-grid">
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/30-related-businesses/coe/01-entity-structure.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">COE Entity Structure</span><span class="doc-lines">298 lines</span></div>
+        <p class="doc-desc">Section 8 vs Trust vs Society comparison. Recommend Section 8 via MCA21 SPICe+. 80G application (Form 10AB). Timeline 90 days. NSDC affiliation path.</p>
+        <div class="doc-tags"><span class="tag">Prof. Sundaram</span><span class="tag gold">Section 8</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/30-related-businesses/coe/02-iti-poly-partnership-list.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">ITI & Polytechnic Partners</span><span class="doc-lines">572 lines</span></div>
+        <p class="doc-desc">All government ITIs and Polytechnics within 50km of Kariapatti: institution, distance, trades, annual student output, approach letter outline for MoU.</p>
+        <div class="doc-tags"><span class="tag">Prof. Sundaram</span><span class="tag gold">MoU</span></div>
+      </a>
+      <a class="doc-card" href="https://github.com/getjeevan/ashle-gardens/blob/main/docs-raw/docs/30-related-businesses/coe/04-pmkvy-funding-guide.md" target="_blank">
+        <div class="doc-card-top"><span class="doc-title">PMKVY Funding Guide</span><span class="doc-lines">653 lines</span></div>
+        <p class="doc-desc">NSDC Smart portal registration, center affiliation criteria (1000 sqft, qualified assessors), per-student payout rates, batch processing, assessment and certification.</p>
+        <div class="doc-tags"><span class="tag">Prof. Sundaram</span><span class="tag gold">NSDC</span><span class="tag">grants</span></div>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--gold);letter-spacing:3px;margin-bottom:10px">ASHLE GARDENS RESEARCH LIBRARY</p>
+  Generated by 10 specialist AI agents · Meenakshipuram, Kariapatti, Virudhunagar, Tamil Nadu<br/>
+  <br/>
+  <a href="index.html">← Back to overview</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/getjeevan/ashle-gardens" target="_blank">View on GitHub</a>
+</footer>
+
+</body>
+</html>
