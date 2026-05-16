@@ -27,7 +27,7 @@ This is not just a co-working space — it is a **work residency on a living cir
 |---|---|---|---|
 | **Day Pass** | 1 day | Hot desk, WiFi, lunch, campus access | ₹800/day |
 | **Weekly Sprint** | 5-7 days | Hot desk + breakfast + lunch + dinner | ₹4,500/week |
-| **Monthly Resident** | 30 days | Dedicated desk + capsule eco-house stay + all meals | ₹22,000/month |
+| **Monthly Resident** | 30 days | Dedicated desk + capsule eco-house stay + all meals | ₹45,000/month |
 | **Research Residency** | 3-6 months | Private pod + capsule stay + all meals + ₹25K prototype budget | ₹35,000/month (or sponsored) |
 | **Team Cabin** | Flexible | Private cabin (4 desks) + 2 capsule houses + meals | ₹55,000/month |
 
@@ -57,10 +57,10 @@ This is not just a co-working space — it is a **work residency on a living cir
 ### Revenue
 - Day passes: 10/day × ₹800 × 300 days = **₹24L/year**
 - Weekly sprints: 5/week × ₹4,500 × 40 weeks = **₹9L/year**
-- Monthly residents: 15 desks × ₹22,000 × 12 months = **₹39.6L/year**
+- Monthly residents: 15 desks × ₹45,000 × 12 months = **₹81L/year**
 - Research residencies: 4 × ₹35,000 × 12 months = **₹16.8L/year**
 - Team cabins: 2 cabins × ₹55,000 × 10 months = **₹11L/year**
-- **Total potential: ₹1-1.2 Cr/year**
+- **Total potential: ₹1.4-1.6 Cr/year**
 
 ### What it costs Ashle Gardens (already paid)
 - WiFi is shared infrastructure (campus anyway)
