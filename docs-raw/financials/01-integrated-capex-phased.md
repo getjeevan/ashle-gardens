@@ -1,195 +1,155 @@
-# 01 — Integrated CAPEX Plan (5-Year Phased)
-**Ashle Gardens, Meenakshipuram, Kariapatti, Virudhunagar**
-_10-BU integrated campus; ₹ crores_
+# Agile CAPEX Plan — Ashle Gardens
+**Meenakshipuram, Kariapatti, Virudhunagar | Start lean. Prove it. Scale from revenue.**
+
+> **Founder note:** Land (J-farm) already available. No land cost in this plan.
+> Total: ₹10–14 Cr over 5 years — not ₹55 Cr all at once.
+> Every phase is funded by the revenue the previous phase generates.
 
 ---
 
-## Executive Summary
+## The Philosophy
 
-| **Phase** | **Years** | **Total CAPEX** | **Key Deliverables** |
-|-----------|-----------|-----------------|----------------------|
-| **Phase 1** | Y1–2 | ₹16.5 Cr | Retirement Wing (30 units), Central Kitchen, Laundry, Biogas, Site Prep |
-| **Phase 2** | Y3–4 | ₹20.2 Cr | COE (100 seats), Eco-tourism (24 capsules), Biochar, Farm Phase 1 |
-| **Phase 3** | Y5+ | ₹14.8 Cr | NRI Suites (12 units), Spa/Wellness, Phase 2 Retirement (20 units), Farm Phase 2 |
-| **Contingency** | Y1–5 | ₹3.5 Cr | 5% reserve for cost overruns, scope changes |
-| **TOTAL** | | **₹55.0 Cr** | Full campus at scale |
+Don't build the whole campus before you have a single customer.
 
----
-
-## Year-by-Year CAPEX Breakdown
-
-### **YEAR 1 (0–12 months) — ₹8.2 Cr**
-
-#### Site Development & Infrastructure
-- **Land leveling, drainage, access roads:** ₹0.8 Cr
-- **Water supply (bore, tank, distribution):** ₹0.6 Cr
-- **Sewage treatment plant (150 KLD STP):** ₹0.5 Cr
-- **Electrical substation, solar array (100 kWp Phase 1):** ₹0.9 Cr
-- **Telecom, Wi-Fi backbone:** ₹0.2 Cr
-- **Subtotal infrastructure:** ₹3.0 Cr
-
-#### BU 1: Retirement Community Wing (Heritage Suites Phase 1)
-- **30 heritage units @ ₹20L/unit (land + building):** ₹6.0 Cr
-- **Common areas (lobby, dining, clinic, activities):** ₹0.8 Cr
-- **Sub-total:** ₹6.8 Cr → **BU1 Total Y1: ₹6.8 Cr**
-
-#### BU 3: Commercial Laundry
-- **Industrial washer-dryer line (200 kg/hr capacity):** ₹0.9 Cr
-- **Building (500 sqm), water chilling, dryers:** ₹0.3 Cr
-- **Sub-total:** ₹1.2 Cr → **BU3 Total Y1: ₹1.2 Cr**
-
-#### BU 4: Central Kitchen
-- **Industrial kitchen equipment (ovens, prep, storage):** ₹0.6 Cr
-- **Building (800 sqm), cold storage:** ₹0.4 Cr
-- **Sub-total:** ₹1.0 Cr → **BU4 Total Y1: ₹1.0 Cr**
-
-#### BU 10: Biogas & Organic Waste
-- **Biogas digester (60 m³, 30 kg/day output):** ₹0.4 Cr
-- **Gas storage, piping, safety:** ₹0.1 Cr
-- **Sub-total:** ₹0.5 Cr → **BU10 Total Y1: ₹0.5 Cr**
-
-#### **YEAR 1 TOTAL: ₹8.2 Cr**
+1. **Revenue-first** — Laundry and kitchen generate cash within 3 months of Phase 0.
+2. **Capsule before suite** — Capsule eco-houses cost ₹8–12L each, earn ₹4,500–8,000/night. Build these before ₹80L heritage suites.
+3. **No spec inventory** — Add rooms only when there's a waitlist.
+4. **Subsidies reduce cash out** — MNRE funds biogas. DIC MSME loan at 6.5% funds laundry equipment.
+5. **COE and co-working cost almost nothing** — existing farm shed, ₹10L fit-out, earning Day 1.
 
 ---
 
-### **YEAR 2 (12–24 months) — ₹8.3 Cr**
+## Phase 0 — Minimum Viable Campus
+**Month 0–6 | Total: ₹65–85L | Funded: founder + 1 NRI seed**
 
-#### Site & Infrastructure (Phase 2)
-- **Additional solar (100 kWp Phase 2, total 200 kWp):** ₹0.9 Cr
-- **Parking, pathways, landscaping:** ₹0.4 Cr
-- **Subtotal:** ₹1.3 Cr
+| Item | Cost |
+|---|---|
+| Site prep: borewell, partial boundary wall, internal road, lighting | ₹12–18L |
+| 3-phase power connection + transformer | ₹6–10L |
+| **4 capsule eco-houses** (bamboo + ferro-cement, 400 sqft each) | ₹32–48L |
+| Basic kitchen (2 burners, fridge) + FSSAI basic registration | ₹5–8L |
+| Small laundry — 2 × 50 kg washers + 2 dryers (200 kg/day) | ₹8–12L |
+| **Biogas plant 25 m³** (MNRE subsidised — govt covers part) | ₹6–10L |
+| COE Lab — 10 desks in existing farm shed fit-out | ₹8–12L |
+| Working capital buffer (3 months ops) | ₹8–10L |
+| **TOTAL Phase 0** | **₹65–85L** |
 
-#### BU 1: Retirement Community (Capsule Airbnb & Common Facilities)
-- **24 capsules @ ₹25L/capsule (mod-fab, en-suite):** ₹6.0 Cr
-- **Capsule common lounge, reception, laundry pickup:** ₹0.5 Cr
-- **Sub-total:** ₹6.5 Cr → **BU1 Total Y2: ₹6.5 Cr**
+**What starts earning in Phase 0:**
 
-#### BU 5: Cottage Residences (Smaller family homes)
-- **12 cottages @ ₹30L/cottage (2 BHK, 1000 sqft):** ₹3.6 Cr
-- **Sub-total:** ₹3.6 Cr → **BU5 Total Y2: ₹3.6 Cr**
-
-#### BU 10: Biochar Unit
-- **Biochar kiln (3 tonne/day capacity):** ₹0.5 Cr
-- **Drying, storage facility:** ₹0.2 Cr
-- **Sub-total:** ₹0.7 Cr → **BU10 Total Y2: ₹0.7 Cr**
-
-#### **YEAR 2 TOTAL: ₹8.3 Cr**
-
----
-
-### **YEAR 3 (24–36 months) — ₹7.5 Cr**
-
-#### BU 2: Centre of Excellence (Agri-tech, Hospitality)
-- **Classroom block (8 labs, 2 demo farms, auditorium):** ₹3.0 Cr
-- **Hostel (100-seat residential capacity):** ₹2.5 Cr
-- **Faculty quarters (8 units):** ₹0.8 Cr
-- **Sub-total:** ₹6.3 Cr → **BU2 Total Y3: ₹6.3 Cr**
-
-#### BU 6: Eco-tourism (Homestays, Adventure)
-- **8 eco-homestays @ ₹35L/unit (bamboo + rammed earth):** ₹2.8 Cr
-- **Reception, trek infrastructure, signage:** ₹0.4 Cr
-- **Sub-total:** ₹3.2 Cr → **BU6 Total Y3: ₹3.2 Cr**
-
-#### BU 9: Farm (5 acres, Phase 1)
-- **Farm bunding, irrigation, storage shed:** ₹0.5 Cr
-- **Sub-total:** ₹0.5 Cr → **BU9 Total Y3: ₹0.5 Cr**
-
-#### **YEAR 3 TOTAL: ₹7.5 Cr**
+| Revenue stream | Monthly |
+|---|---|
+| 4 capsule Airbnb @ ₹5,000/night × 60% occ | ₹13L |
+| Laundry 200 kg/day × 3 hospital SLAs @ ₹22/kg | ₹4.4L |
+| COE day passes + weekly co-working | ₹1–2L |
+| **Total by Month 6** | **₹18–20L/month** |
 
 ---
 
-### **YEAR 4 (36–48 months) — ₹12.7 Cr**
+## Phase 1 — Validate and Scale
+**Month 7–18 | Total: ₹1.8–2.5 Cr | Funded: Phase 0 cash flow + ₹1.5 Cr DIC MSME loan**
 
-#### BU 1: Phase 2 Retirement Wing
-- **20 additional heritage units @ ₹22L/unit:** ₹4.4 Cr
-- **Extended common facilities (expanded clinic, activities):** ₹0.6 Cr
-- **Sub-total:** ₹5.0 Cr → **BU1 Total Y4: ₹5.0 Cr**
+*Walk into DIC Virudhunagar with 3 signed hospital SLA contracts + 3 months bank statements. MSME loan at 6.5% is near-certain.*
 
-#### BU 7: Spa & Wellness Centre
-- **Indoor pool, yoga/pilates studios, massage therapy:** ₹1.8 Cr
-- **Sauna, steam, change rooms:** ₹0.6 Cr
-- **Sub-total:** ₹2.4 Cr → **BU7 Total Y4: ₹2.4 Cr**
+| Item | Cost |
+|---|---|
+| Laundry to 800 kg/day — 2 more 100 kg washers + dryers + RFID | ₹60–80L |
+| Kitchen upgrade — FSSAI Central License, combi ovens, 500 meals/day | ₹50–70L |
+| **8 more capsule eco-houses** (12 total) | ₹65–95L |
+| **First 8 heritage rooms** (1,200 sqft — Athangudi tile, teak, lime plaster) | ₹85L–1.1 Cr |
+| Lake bund (basic earthwork — no island yet) | ₹20–30L |
+| Biochar retort kiln (small, 100 kg/day) | ₹4–6L |
+| **TOTAL Phase 1** | **₹1.8–2.5 Cr** |
 
-#### BU 8: Organic Store & Café
-- **Retail shop, cold storage, café kitchen:** ₹0.8 Cr
-- **Sub-total:** ₹0.8 Cr → **BU8 Total Y4: ₹0.8 Cr**
-
-#### BU 9: Farm Phase 2 Expansion
-- **3 additional acres, fruit orchard, irrigation:** ₹1.2 Cr
-- **Cold storage for seasonal harvest:** ₹0.5 Cr
-- **Sub-total:** ₹1.7 Cr → **BU9 Total Y4: ₹1.7 Cr**
-
-#### BU 10: Organic Waste Upgrade
-- **Additional biogas units (scale to 60 kg/day):** ₹0.6 Cr
-- **Sub-total:** ₹0.6 Cr → **BU10 Total Y4: ₹0.6 Cr**
-
-#### Infrastructure: Residual
-- **Tertiary pathways, additional parking:** ₹0.2 Cr
-
-#### **YEAR 4 TOTAL: ₹12.7 Cr**
+**Monthly revenue at end of Phase 1: ₹90–120L/month**
 
 ---
 
-### **YEAR 5 (48–60 months) — ₹6.4 Cr**
+## Phase 2 — Proven Revenue, Expand
+**Month 19–36 | Total: ₹3–4 Cr | Funded: Phase 1 operating surplus**
 
-#### BU 1: Premium NRI Suites
-- **12 luxury NRI suites @ ₹40L/suite (2000 sqft, en-suite spa):** ₹4.8 Cr
-- **NRI concierge, housekeeping base:** ₹0.3 Cr
-- **Sub-total:** ₹5.1 Cr → **BU1 Total Y5: ₹5.1 Cr**
+*Phase 1 generates ₹1 Cr/month. After ₹50L OPEX, surplus = ₹50L/month. Over 18 months = ₹9 Cr surplus. Phase 2 costs ₹3–4 Cr. Fully self-funded.*
 
-#### BU 6: Eco-tourism Upgrade
-- **2 additional premium homestays, signage refresh:** ₹0.6 Cr
-- **Sub-total:** ₹0.6 Cr → **BU6 Total Y5: ₹0.6 Cr**
+| Item | Cost |
+|---|---|
+| Laundry to 2,000 kg/day (full capacity) | ₹55–75L |
+| Kitchen to 1,500 meals/day | ₹30–45L |
+| **12 more heritage suites** (20 total) | ₹1.2–1.5 Cr |
+| **8 more capsule houses** (24 total) | ₹65–95L |
+| Lake island + jetty + pedestrian bridge | ₹35–50L |
+| COE Innovation Lab full fit-out (30 desks, maker corner) | ₹18–25L |
+| Co-working 4 private team cabins | ₹12–18L |
+| Eco-tourism paths + pavilion + outdoor nodes | ₹20–30L |
+| Farm Phase 1 (kitchen garden + orchard planting) | ₹15–20L |
+| **TOTAL Phase 2** | **₹3–4 Cr** |
 
-#### Contingency & Refinements
-- **General reserves, tech upgrades:** ₹0.7 Cr
-
-#### **YEAR 5 TOTAL: ₹6.4 Cr**
-
----
-
-## Summary Table: CAPEX by Business Unit (₹ Crores)
-
-| **BU #** | **Business Unit** | **Y1** | **Y2** | **Y3** | **Y4** | **Y5** | **Total** | **% of CAPEX** |
-|----------|-------------------|--------|--------|--------|--------|--------|-----------|----------------|
-| **1** | Retirement Community (Heritage + Capsules + NRI) | 6.8 | 6.5 | — | 5.0 | 5.1 | **23.4 Cr** | 42.6% |
-| **2** | Centre of Excellence | — | — | 6.3 | — | — | **6.3 Cr** | 11.4% |
-| **3** | Commercial Laundry | 1.2 | — | — | — | — | **1.2 Cr** | 2.2% |
-| **4** | Central Kitchen | 1.0 | — | — | — | — | **1.0 Cr** | 1.8% |
-| **5** | Cottage Residences | — | 3.6 | — | — | — | **3.6 Cr** | 6.5% |
-| **6** | Eco-tourism (Homestays) | — | — | 3.2 | — | 0.6 | **3.8 Cr** | 6.9% |
-| **7** | Spa & Wellness | — | — | — | 2.4 | — | **2.4 Cr** | 4.4% |
-| **8** | Organic Store & Café | — | — | — | 0.8 | — | **0.8 Cr** | 1.5% |
-| **9** | Farm (Organic Agri) | — | — | 0.5 | 1.7 | — | **2.2 Cr** | 4.0% |
-| **10** | Biogas + Biochar | 0.5 | 0.7 | — | 0.6 | — | **1.8 Cr** | 3.3% |
-| | **Infrastructure & Common** | 3.0 | 1.3 | 0.0 | 0.2 | 0.7 | **5.2 Cr** | 9.5% |
-| | **Contingency (5%)** | — | — | — | — | 3.5 | **3.5 Cr** | 6.4% |
-| | **ANNUAL TOTAL** | **8.2** | **8.3** | **7.5** | **12.7** | **6.4** | **₹55.0 Cr** | 100% |
+**Monthly revenue at end of Phase 2: ₹2.5–3.5 Cr/month**
 
 ---
 
-## Key Assumptions
+## Phase 3 — Full Vision (self-funded, no external capital)
+**Month 37–60 | Total: ₹4–6 Cr | Funded: operating surplus only**
 
-1. **Heritage Suite Cost:** ₹20L (Y1) → ₹22L (Y4) — cost inflation 2.5% YoY
-2. **Capsule Cost:** ₹25L reflects modular, prefab construction (ETA units)
-3. **COE Hostel:** ₹2.5 Cr for 100-seat residential (₹25L/seat)
-4. **Eco-homestays:** ₹35L uses sustainable materials (bamboo, rammed earth) — marginal cost vs. masonry
-5. **Solar & Infrastructure:** Phased rollout; Y2 completes 200 kWp solar capacity
-6. **Land:** Assumed ₹10–12L/acre already acquired; not included in CAPEX (sunk cost)
-7. **Contingency:** 5% held in reserve for scope expansion, material inflation, labour adjustment
-
----
-
-## Phasing Rationale
-
-- **Y1–2 (Phase 1, ₹16.5 Cr):** Core income generators (Retirement + Laundry + Kitchen) + infrastructure. Quick revenue pull to fund Phase 2.
-- **Y3–4 (Phase 2, ₹20.2 Cr):** COE (prestige, recurring revenue + govt links), eco-tourism (high margin, NRI appeal), farm expansion.
-- **Y5+ (Phase 3, ₹14.8 Cr):** Premium NRI suites, wellness scaling. By now Phase 1 units stabilized, can finance from operations + refinancing.
+| Item | Cost |
+|---|---|
+| Remaining 10 heritage suites (30 total) | ₹1–1.2 Cr |
+| Ayurveda spa + wellness centre | ₹80L–1 Cr |
+| NRI concierge office | ₹15–20L |
+| Farm Phase 2 (paddy, fodder, cows) | ₹35–50L |
+| Biochar scale to 500 kg/day + carbon credit registration | ₹15–20L |
+| Water stream landscaping | ₹25–35L |
+| **TOTAL Phase 3** | **₹4–6 Cr** |
 
 ---
 
-**Next:** See `02-unit-economics-per-BU.md` for revenue projections and payback analysis by business unit.
+## Total Programme
+
+| Phase | Period | Investment | Funding |
+|---|---|---|---|
+| Phase 0 — MVC | Month 0–6 | **₹65–85L** | Founder + 1 NRI seed |
+| Phase 1 — Validate | Month 7–18 | **₹1.8–2.5 Cr** | Cash flow + MSME loan |
+| Phase 2 — Expand | Month 19–36 | **₹3–4 Cr** | Operating surplus |
+| Phase 3 — Full vision | Month 37–60 | **₹4–6 Cr** | Operating surplus |
+| **TOTAL** | **5 years** | **₹10–14 Cr** | **No big equity raise needed** |
 
 ---
 
-**CFO signature:** Karthik | Updated: 2026-05-16 | Status: Draft — Board approval pending
+## What Can You Do With ₹50L Today?
+
+| With ₹50L: | |
+|---|---|
+| 4 capsule eco-houses | ✅ |
+| Basic laundry (200 kg/day) | ✅ |
+| Basic kitchen + FSSAI | ✅ |
+| Biogas plant (MNRE subsidised) | ✅ |
+| COE Innovation Lab (basic) | ✅ |
+| Site prep + borewell + power | ✅ |
+
+**By Month 3: ₹12–18L/month inflow.** The MSME loan follows automatically.
+
+---
+
+## Revenue Milestones
+
+| Milestone | Month | Monthly Revenue | Annual |
+|---|---|---|---|
+| Phase 0 live | Month 3 | ₹12–18L | ₹1.5–2 Cr |
+| Phase 0 mature | Month 6 | ₹18–22L | ₹2.2–2.6 Cr |
+| Phase 1 complete | Month 18 | ₹90–120L | ₹10–14 Cr |
+| Phase 2 complete | Month 36 | ₹2.5–3.5 Cr | ₹30–42 Cr |
+| Phase 3 complete | Month 60 | ₹4–6 Cr | ₹48–72 Cr |
+
+---
+
+## Top 5 Risks
+
+| Risk | Mitigation |
+|---|---|
+| Laundry SLAs take time | Start with 1 hospital on free trial week — convert to SLA |
+| Airbnb occupancy low at start | List 3 months pre-launch; first guests = friends/family for 5-star base |
+| Construction overruns | Fix-price contracts with Kariapatti local contractors |
+| MSME loan delayed | Start Phase 1 laundry from cash flow; loan supplements |
+| Monsoon disruption | Phase 0 groundwork Jan–May; avoid structural work Jul–Sep |
+
+---
+*Updated: 2026-05-16 | Karthik, CFO — Ashle Gardens*
+*Revise quarterly as actuals replace estimates.*
