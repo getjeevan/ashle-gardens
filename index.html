@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Ashle Gardens — A heritage integrated retirement campus in Madurai, Tamil Nadu. Country-club living with circular economy."/>
+  <title>Ashle Gardens — Heritage Integrated Campus, Madurai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --bg:#0c1a0e; --surface:#132016; --surface2:#1a2c1c;
+      --border:rgba(255,255,255,0.07); --text:#e8f0e6;
+      --muted:#7a9878; --gold:#c8a84a; --green:#5aab5a; --accent:#3a8c3d;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6}
+
+    /* NAV */
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(12,26,14,0.92);backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border);
+      padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px;
+    }
+    .nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.3rem;letter-spacing:3px;color:var(--gold);text-decoration:none;text-transform:uppercase}
+    .nav-links{display:flex;gap:28px}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--text)}
+
+    /* HERO */
+    .hero{
+      min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      text-align:center;padding:60px 40px;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 120%, rgba(58,140,61,.12) 0%, transparent 60%),
+        linear-gradient(180deg,#0c1a0e 0%,#091509 100%);
+      position:relative;overflow:hidden;
+    }
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background:url('images/01-ashle-gardens-aerial-golden-hour.png') center/cover no-repeat;
+      opacity:.12;
+    }
+    .hero-content{position:relative;max-width:780px}
+    .hero-tag{
+      display:inline-block;
+      font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--green);
+      border:1px solid rgba(90,171,90,.3);padding:6px 18px;border-radius:20px;
+      margin-bottom:28px;background:rgba(90,171,90,.06);
+    }
+    .hero h1{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(3rem,7vw,5.5rem);font-weight:300;letter-spacing:4px;
+      color:var(--gold);line-height:1.1;margin-bottom:20px;text-transform:uppercase;
+    }
+    .hero h1 em{font-style:italic;color:var(--text)}
+    .hero p{
+      font-size:1rem;color:var(--muted);max-width:520px;margin:0 auto 36px;line-height:1.8;
+    }
+    .hero-meta{
+      display:flex;flex-wrap:wrap;justify-content:center;gap:28px;
+      font-size:.75rem;letter-spacing:1px;color:var(--muted);
+    }
+    .hero-meta span{display:flex;align-items:center;gap:6px}
+    .hero-meta span::before{content:'·';color:var(--accent)}
+
+    /* SECTIONS */
+    section{padding:80px 40px;max-width:1200px;margin:0 auto}
+    .section-label{
+      font-size:.68rem;letter-spacing:3px;text-transform:uppercase;
+      color:var(--green);margin-bottom:12px;
+    }
+    .section-title{
+      font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.8rem);
+      font-weight:300;color:var(--gold);margin-bottom:16px;letter-spacing:2px;
+    }
+    .section-sub{font-size:.9rem;color:var(--muted);max-width:600px;line-height:1.8;margin-bottom:48px}
+    .divider{border:none;border-top:1px solid var(--border);margin:0 40px}
+
+    /* VISION GRID */
+    .vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+    .vision-item{
+      background:var(--surface);padding:32px;
+      transition:background .2s;
+    }
+    .vision-item:hover{background:var(--surface2)}
+    .vision-item:nth-child(1){border-radius:12px 0 0 0}
+    .vision-item:nth-child(2){border-radius:0 12px 0 0}
+    .vision-item:nth-child(n+5):last-child,.vision-item:nth-last-child(1){border-radius:0 0 0 12px}
+    .vision-icon{font-size:1.6rem;margin-bottom:12px}
+    .vision-item h3{
+      font-family:'Cormorant Garamond',serif;font-size:1.1rem;
+      color:var(--text);margin-bottom:6px;letter-spacing:1px;
+    }
+    .vision-item p{font-size:.8rem;color:var(--muted);line-height:1.7}
+
+    /* BUSINESS UNITS */
+    .bu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+    .bu-card{
+      background:var(--surface);border:1px solid var(--border);border-radius:10px;
+      padding:22px;transition:border-color .2s,transform .15s;
+    }
+    .bu-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .bu-num{font-size:.65rem;color:var(--accent);font-family:monospace;margin-bottom:8px;letter-spacing:1px}
+    .bu-card h3{font-size:.92rem;color:var(--text);margin-bottom:6px}
+    .bu-card p{font-size:.78rem;color:var(--muted);line-height:1.6}
+    .bu-arrow{float:right;color:var(--border);font-size:1rem;margin-top:-2px}
+
+    /* GALLERY */
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+    @media(max-width:700px){.gallery-grid{grid-template-columns:1fr}}
+    .gcard{
+      background:var(--surface);border:1px solid var(--border);
+      border-radius:12px;overflow:hidden;cursor:pointer;
+      transition:transform .2s,border-color .2s,box-shadow .2s;
+    }
+    .gcard:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 40px rgba(0,0,0,.5)}
+    .gcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+    .gcard.tall img{aspect-ratio:4/3}
+    .gcard-body{padding:14px 16px}
+    .gcard-title{font-size:.9rem;color:var(--text);margin-bottom:4px}
+    .gcard-meta{font-size:.72rem;color:var(--muted);font-family:monospace}
+    .ai-badge{
+      display:inline-block;font-size:.62rem;padding:2px 8px;
+      background:rgba(201,168,74,.1);border:1px solid rgba(201,168,74,.25);
+      color:var(--gold);border-radius:8px;margin-left:8px;
+    }
+
+    /* SITE INFO */
+    .site-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2px}
+    .site-item{background:var(--surface);padding:24px}
+    .site-item:first-child{border-radius:12px 0 0 12px}
+    .site-item:last-child{border-radius:0 12px 12px 0}
+    .site-label{font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+    .site-value{font-size:.92rem;color:var(--text)}
+
+    /* TEAM */
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+    .team-card{
+      background:var(--surface);border:1px solid var(--border);border-radius:10px;
+      padding:18px;text-align:center;
+    }
+    .team-avatar{font-size:2rem;margin-bottom:8px}
+    .team-name{font-size:.88rem;color:var(--text);margin-bottom:3px}
+    .team-role{font-size:.72rem;color:var(--muted)}
+
+    /* LIGHTBOX */
+    .lb{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.95);
+      flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px}
+    .lb.open{display:flex}
+    .lb img{max-width:100%;max-height:80vh;object-fit:contain;border-radius:8px}
+    .lb-cap{color:var(--muted);font-size:.82rem;text-align:center}
+    .lb-close{position:absolute;top:18px;right:22px;font-size:1.6rem;color:var(--muted);cursor:pointer;background:none;border:none;transition:color .15s}
+    .lb-close:hover{color:var(--text)}
+    .lb-nav{position:absolute;top:50%;transform:translateY(-50%);
+      background:rgba(255,255,255,.07);border:1px solid var(--border);color:var(--text);
+      font-size:1.4rem;width:46px;height:46px;border-radius:50%;cursor:pointer;
+      display:flex;align-items:center;justify-content:center;transition:background .15s}
+    .lb-nav:hover{background:rgba(255,255,255,.14)}
+    .lb-prev{left:18px}.lb-next{right:18px}
+
+    /* FOOTER */
+    footer{
+      text-align:center;padding:40px;color:var(--muted);font-size:.72rem;
+      letter-spacing:1px;border-top:1px solid var(--border);
+      background:var(--surface);
+    }
+    footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border)}
+    footer a:hover{color:var(--text)}
+
+    @media(max-width:768px){
+      nav{padding:0 20px}.nav-links{gap:16px}
+      section{padding:60px 20px}
+      .vision-grid,.site-grid{grid-template-columns:1fr}
+      .vision-item:nth-child(n){border-radius:0}
+      .hero{padding:60px 20px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="#">Ashle Gardens</a>
+  <div class="nav-links">
+    <a href="#vision">Vision</a>
+    <a href="#businesses">Businesses</a>
+    <a href="#visuals">Visuals</a>
+    <a href="#site">Site</a>
+    <a href="#team">Team</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Heritage · Circular Economy · Retirement Living</div>
+    <h1>Ashle<br/><em>Gardens</em></h1>
+    <p>A country-club-style retirement community rooted in Madurai's heritage — where every cost centre is a profit centre, and rural youth become skilled entrepreneurs.</p>
+    <div class="hero-meta">
+      <span>Meenakshipuram, Kariapatti</span>
+      <span>Virudhunagar District, Tamil Nadu</span>
+      <span>30–40 acres</span>
+      <span>10 Business Units</span>
+    </div>
+  </div>
+</div>
+
+<!-- VISION -->
+<section id="vision">
+  <div class="section-label">Our Philosophy</div>
+  <div class="section-title">Where Heritage Meets Circularity</div>
+  <p class="section-sub">Ashle Gardens is not just a retirement home — it is an integrated living ecosystem where every output from one system becomes the input for another.</p>
+
+  <div class="vision-grid">
+    <div class="vision-item">
+      <div class="vision-icon">🏛️</div>
+      <h3>Heritage Architecture</h3>
+      <p>Naalukettu courtyard suites, Athangudi tile floors, teak columns, Chettinad plasterwork — the lived Tamil tradition, elevated to country-club comfort.</p>
+    </div>
+    <div class="vision-item">
+      <div class="vision-icon">♻️</div>
+      <h3>Circular Economy</h3>
+      <p>Kitchen waste feeds the biogas plant. Biogas powers the kitchen. Biochar from the farm improves the soil. The farm feeds the kitchen. Nothing is wasted.</p>
+    </div>
+    <div class="vision-item">
+      <div class="vision-icon">🎓</div>
+      <h3>Centre of Excellence</h3>
+      <p>Rural youth and ITI/Polytechnic students earn a stipend while rotating through every business unit — learning by doing, researching by working.</p>
+    </div>
+    <div class="vision-item">
+      <div class="vision-icon">🌏</div>
+      <h3>NRI Homecoming</h3>
+      <p>"My parents gave up everything to help me build a life abroad. Ashle Gardens is where I give them the life they deserved." Structured for NRI investment under FEMA.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- BUSINESS UNITS -->
+<section id="businesses">
+  <div class="section-label">10 Business Units</div>
+  <div class="section-title">Every Cost Centre, A Profit Centre</div>
+  <p class="section-sub">Each unit funds the next. Together they make the campus self-sustaining within 3 years of full operations.</p>
+
+  <div class="bu-grid">
+    <div class="bu-card"><div class="bu-num">01 · CORE</div><h3>Retirement Community <span class="bu-arrow">→</span></h3><p>Heritage suites + capsule Airbnb + lake + island. Country-club living for active seniors and NRI families.</p></div>
+    <div class="bu-card"><div class="bu-num">02 · REVENUE</div><h3>Commercial Laundry <span class="bu-arrow">→</span></h3><p>B2B to Madurai's 50+ hospitals, 200+ hotels, and Sivakasi's 300+ industrial units. RFID-tracked, NABH-compliant.</p></div>
+    <div class="bu-card"><div class="bu-num">03 · REVENUE</div><h3>Commercial Kitchen <span class="bu-arrow">→</span></h3><p>Hospital canteens, heritage wedding catering, cloud kitchen (Swiggy/Zomato), FSSAI-licensed central kitchen.</p></div>
+    <div class="bu-card"><div class="bu-num">04 · EXPERIENCE</div><h3>Eco-Tourism <span class="bu-arrow">→</span></h3><p>Day visits, farm immersions, MICE corporate offsite, school science programs, NRI visit packages.</p></div>
+    <div class="bu-card"><div class="bu-num">05 · CIRCULAR</div><h3>Biochar Production <span class="bu-arrow">→</span></h3><p>Farm biomass → premium agricultural biochar → soil amendment + carbon credits + Thoothukudi port export.</p></div>
+    <div class="bu-card"><div class="bu-num">06 · CIRCULAR</div><h3>Biogas Plant <span class="bu-arrow">→</span></h3><p>Kitchen + farm organic waste → 15–22 m³/day biogas → kitchen fuel → saves ₹3–5L/yr in LPG.</p></div>
+    <div class="bu-card"><div class="bu-num">07 · CIRCULAR</div><h3>Organic Farm <span class="bu-arrow">→</span></h3><p>Zero-mile produce for kitchen and members. Native Seeraga Samba paddy, heritage fruits, native flora. CSA subscriptions.</p></div>
+    <div class="bu-card"><div class="bu-num">08 · SOCIAL</div><h3>Centre of Excellence <span class="bu-arrow">→</span></h3><p>Section 8 company. ITI/Polytechnic MoUs. PMKVY-funded. Rural students earn ₹6–8K/month rotating across all BUs.</p></div>
+    <div class="bu-card"><div class="bu-num">09 · WELLNESS</div><h3>Ayurveda Spa <span class="bu-arrow">→</span></h3><p>Heritage wellness retreat, naturopathy, day spa open to public. Complement to the lake and permaculture environment.</p></div>
+    <div class="bu-card"><div class="bu-num">10 · ADVISORY</div><h3>NRI Concierge <span class="bu-arrow">→</span></h3><p>Return-to-India advisory for Tamil diaspora. Banking, FEMA, property management, household setup. Retainer model.</p></div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- VISUALS -->
+<section id="visuals">
+  <div class="section-label">Concept Visuals</div>
+  <div class="section-title">Ashle Gardens — Imagined</div>
+  <p class="section-sub">AI-generated concept visuals for the planning and research phase. Professional photography and architecture renders follow when construction begins.</p>
+
+  <div class="gallery-grid">
+    <div class="gcard" onclick="lb(0)">
+      <img src="images/01-ashle-gardens-aerial-golden-hour.png" alt="Aerial view" loading="lazy"/>
+      <div class="gcard-body">
+        <div class="gcard-title">Aerial — Golden Hour <span class="ai-badge">AI Concept</span></div>
+        <div class="gcard-meta">Lake · Island · Heritage buildings · Eco-capsules · Permaculture farm</div>
+      </div>
+    </div>
+    <div class="gcard" onclick="lb(1)">
+      <img src="images/02-heritage-room-interior.png" alt="Heritage room" loading="lazy"/>
+      <div class="gcard-body">
+        <div class="gcard-title">Heritage Suite Interior <span class="ai-badge">AI Concept</span></div>
+        <div class="gcard-meta">Athangudi tile · Teak columns · Open courtyard · Warm lantern lighting</div>
+      </div>
+    </div>
+    <div class="gcard" onclick="lb(2)">
+      <img src="images/03-lake-and-island.png" alt="Lake and island" loading="lazy"/>
+      <div class="gcard-body">
+        <div class="gcard-title">3-Acre Lake + 1-Acre Island <span class="ai-badge">AI Concept</span></div>
+        <div class="gcard-meta">Morning mist · Wooden bridge · Native trees · Capsule eco-house on island</div>
+      </div>
+    </div>
+    <div class="gcard tall" onclick="lb(3)">
+      <img src="images/04-capsule-eco-house.png" alt="Capsule eco-house" loading="lazy"/>
+      <div class="gcard-body">
+        <div class="gcard-title">Capsule Eco-House (Airbnb) <span class="ai-badge">AI Concept</span></div>
+        <div class="gcard-meta">Bamboo + ferro-cement · Water stream · Fairy lights · Boutique stay experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- SITE -->
+<section id="site">
+  <div class="section-label">The Land</div>
+  <div class="section-title">J-Farm, Meenakshipuram</div>
+  <p class="section-sub">22 km south of Madurai on the NH-85 corridor — close enough for B2B logistics, far enough for tranquil living.</p>
+
+  <div class="site-grid">
+    <div class="site-item"><div class="site-label">Village</div><div class="site-value">Meenakshipuram</div></div>
+    <div class="site-item"><div class="site-label">Taluk</div><div class="site-value">Kariapatti</div></div>
+    <div class="site-item"><div class="site-label">District</div><div class="site-value">Virudhunagar, TN</div></div>
+    <div class="site-item"><div class="site-label">Coordinates</div><div class="site-value">9.7212°N, 78.0852°E</div></div>
+    <div class="site-item"><div class="site-label">From Madurai</div><div class="site-value">22.4 km S</div></div>
+    <div class="site-item"><div class="site-label">From Airport (IXM)</div><div class="site-value">12.7 km</div></div>
+    <div class="site-item"><div class="site-label">Highway</div><div class="site-value">NH-85 corridor</div></div>
+    <div class="site-item"><div class="site-label">Scale</div><div class="site-value">30–40 acres</div></div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- TEAM / PERSONAS -->
+<section id="team">
+  <div class="section-label">Project Team</div>
+  <div class="section-title">10 Specialist Advisors</div>
+  <p class="section-sub">Each domain is handled by a dedicated expert focused entirely on Ashle Gardens.</p>
+
+  <div class="team-grid">
+    <div class="team-card"><div class="team-avatar">👨‍💼</div><div class="team-name">Rajan-Anna</div><div class="team-role">Govt Liaison & Approvals<br/>Virudhunagar District</div></div>
+    <div class="team-card"><div class="team-avatar">🌳</div><div class="team-name">Dr. Meera Selvam</div><div class="team-role">Permaculture & Site Design<br/>Water · Heritage Architecture</div></div>
+    <div class="team-card"><div class="team-avatar">💼</div><div class="team-name">Karthik</div><div class="team-role">CFO & Financial Architect<br/>CAPEX · NRI Investor Relations</div></div>
+    <div class="team-card"><div class="team-avatar">🧺</div><div class="team-name">Anbu</div><div class="team-role">Commercial Laundry Head<br/>Hospital B2B · NABH Compliance</div></div>
+    <div class="team-card"><div class="team-avatar">👩‍🍳</div><div class="team-name">Chef Selvi</div><div class="team-role">Commercial Kitchen Head<br/>FSSAI · Heritage Cuisine</div></div>
+    <div class="team-card"><div class="team-avatar">🎓</div><div class="team-name">Prof. Sundaram</div><div class="team-role">COE Director<br/>ITI · Polytechnic · PMKVY</div></div>
+    <div class="team-card"><div class="team-avatar">🌿</div><div class="team-name">Deepa</div><div class="team-role">Eco-tourism & Experiences<br/>MICE · School Programs</div></div>
+    <div class="team-card"><div class="team-avatar">♻️</div><div class="team-name">Velu</div><div class="team-role">Circular Economy Lead<br/>Biochar · Biogas · Organic Farm</div></div>
+    <div class="team-card"><div class="team-avatar">📣</div><div class="team-name">Priya</div><div class="team-role">Brand & NRI Sales<br/>Tamil Diaspora · Digital</div></div>
+    <div class="team-card"><div class="team-avatar">⚖️</div><div class="team-name">Adv. Meenakshi</div><div class="team-role">Legal & Compliance<br/>RERA · FEMA · Land Conversion</div></div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="closeLb(event)">
+  <button class="lb-close" onclick="closeLb()">✕</button>
+  <button class="lb-nav lb-prev" onclick="navLb(-1,event)">‹</button>
+  <img id="lb-img" src="" alt=""/>
+  <p class="lb-cap" id="lb-cap"></p>
+  <button class="lb-nav lb-next" onclick="navLb(1,event)">›</button>
+</div>
+
+<footer>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);letter-spacing:3px;margin-bottom:12px">ASHLE GARDENS</p>
+  Meenakshipuram · Kariapatti · Virudhunagar · Tamil Nadu<br/>
+  <br/>
+  <a href="https://maps.app.goo.gl/nWsZJq5sc1soiZyL9">View on Google Maps</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/getjeevan/ashle-gardens">GitHub</a>
+</footer>
+
+<script>
+const IMGS=[
+  {s:'images/01-ashle-gardens-aerial-golden-hour.png',c:'Aerial — Golden Hour · Lake · Island · Heritage Buildings · Eco-Capsules'},
+  {s:'images/02-heritage-room-interior.png',c:'Heritage Suite · Athangudi Tile · Teak Columns · Open Courtyard'},
+  {s:'images/03-lake-and-island.png',c:'3-Acre Lake + 1-Acre Island · Morning Mist · Wooden Bridge'},
+  {s:'images/04-capsule-eco-house.png',c:'Capsule Eco-House · Bamboo · Water Stream · Fairy Lights'},
+];
+let cur=0;
+function lb(i){cur=i;document.getElementById('lb-img').src=IMGS[i].s;document.getElementById('lb-cap').textContent=IMGS[i].c;document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden';}
+function closeLb(e){if(!e||e.target===document.getElementById('lb')||e.target.classList.contains('lb-close')){document.getElementById('lb').classList.remove('open');document.body.style.overflow='';}}
+function navLb(d,e){e&&e.stopPropagation();cur=(cur+d+IMGS.length)%IMGS.length;lb(cur);}
+document.addEventListener('keydown',e=>{if(!document.getElementById('lb').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowRight')navLb(1);if(e.key==='ArrowLeft')navLb(-1);});
+</script>
+</body>
+</html>
