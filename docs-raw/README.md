@@ -20,7 +20,8 @@ become skilled entrepreneurs through a live-work-research Centre of Excellence.
 8. **COE (Centre of Excellence)** — Pro bono innovation residency for brilliant young minds. They solve real problems for Ashle Gardens portfolio. No stipend — they get free stay, meals, mentorship, ₹50K prototype budget, and the right to commercialise their solution.
 9. **Ayurveda Spa & Wellness** — retreat programs, day spa, naturopathy
 10. **NRI Concierge Services**
-11. **Co-working & Research Residency** — stay-and-work for entrepreneurs, research scholars, remote workers. Short-term and monthly options. — return-to-India advisory, property management, admin
+11. **Co-working & Research Residency** — stay-and-work campus for entrepreneurs, research scholars, remote workers. Short-term and monthly options.
+12. **Pet Spa & Hostel** — premium pet grooming (incl. Ayurveda pet treatments), boarding, and pet-friendly eco-stay. ₹1.14 Cr/yr, 74% EBITDA margin. — stay-and-work for entrepreneurs, research scholars, remote workers. Short-term and monthly options. — return-to-India advisory, property management, admin
 
 ## Workspace structure
 - `docs/` — vision, market research, regulatory, related businesses

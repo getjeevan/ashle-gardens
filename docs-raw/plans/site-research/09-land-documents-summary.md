@@ -136,3 +136,16 @@ Essential checks before finalising:
 - Patta 56: P/26/08/004/00056/70441
 - Patta 113: P/26/08/004/00113/30415
 - Patta 446: P/26/08/004/00446/60444
+
+---
+
+## Founder Action Log (2026-05-16)
+
+| # | Issue | Status | Notes |
+|---|---|---|---|
+| 1 | Total extent is 4.6 acres — full project needs 30–40 acres | ✅ **Confirmed** | Additional parcels from other families being acquired. Share new patta/documents when available. |
+| 2 | Nanjai land → extra PWD/WRO NOC needed for conversion | ✅ **Understood** | Factor into approval timeline. Rajan-Anna to identify correct WRO office in Kariapatti area. |
+| 3 | Patta 113 has 2 owners — both must sign sale deed | 🔄 **Follow up** | Verify if Silukka Nayakkar and Vellaisamy Nayakkar are alive or need legal heirs. |
+| 4 | "D2002/6" notation on some Patta 113 fields | 🔄 **Check** | Verify at Kariapatti Tahsildar office — court division or partition order from 2002. Must be resolved before registration. |
+
+**Next step:** Share land documents for the remaining parcels (the rest of the 30–40 acres) when available.
