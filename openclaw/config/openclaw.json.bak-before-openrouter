@@ -1,0 +1,63 @@
+{
+  "gateway": {
+    "controlUi": {
+      "allowedOrigins": [
+        "http://127.0.0.1:18789",
+        "http://localhost:18789",
+        "https://100.85.33.109:8443",
+        "https://srv1518894.tail736321.ts.net",
+        "https://srv1518894.tail736321.ts.net:8443"
+      ]
+    },
+    "mode": "local"
+  },
+  "agents": {
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "rajan-anna",
+        "name": "rajan-anna",
+        "workspace": "/home/node/.openclaw/workspace/madurai-retirement-club",
+        "agentDir": "/home/node/.openclaw/agents/rajan-anna"
+      },
+      {
+        "id": "meera",
+        "name": "meera",
+        "workspace": "/home/node/.openclaw/workspace/madurai-retirement-club",
+        "agentDir": "/home/node/.openclaw/agents/meera"
+      }
+    ],
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-sonnet-4-5"
+      },
+      "models": {
+        "anthropic/claude-sonnet-4-5": {}
+      }
+    }
+  },
+  "bindings": [
+    {
+      "type": "route",
+      "agentId": "rajan-anna",
+      "match": {
+        "channel": "slack",
+        "accountId": "govt-schemes"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "meera",
+      "match": {
+        "channel": "slack",
+        "accountId": "site-design"
+      }
+    }
+  ],
+  "meta": {
+    "lastTouchedVersion": "2026.5.12",
+    "lastTouchedAt": "2026-05-15T02:53:11.797Z"
+  }
+}

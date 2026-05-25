@@ -1,0 +1,14 @@
+{
+  "providers": {
+    "ollama": {
+      "baseUrl": "http://100.112.118.83:11434",
+      "api": "ollama",
+      "models": [
+        {
+          "name": "devstral:latest",
+          "id": "devstral:latest"
+        }
+      ]
+    }
+  }
+}
