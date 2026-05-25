@@ -1,0 +1,119 @@
+{
+  "gateway": {
+    "controlUi": {
+      "allowedOrigins": [
+        "http://127.0.0.1:18789",
+        "http://localhost:18789",
+        "https://100.85.33.109:8443",
+        "https://srv1518894.tail736321.ts.net",
+        "https://srv1518894.tail736321.ts.net:8443"
+      ]
+    },
+    "mode": "local"
+  },
+  "agents": {
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "rajan-anna",
+        "name": "rajan-anna",
+        "workspace": "/home/node/.openclaw/workspace/madurai-retirement-club",
+        "agentDir": "/home/node/.openclaw/agents/rajan-anna"
+      },
+      {
+        "id": "meera",
+        "name": "meera",
+        "workspace": "/home/node/.openclaw/workspace/madurai-retirement-club",
+        "agentDir": "/home/node/.openclaw/agents/meera"
+      },
+      {
+        "id": "karthik",
+        "name": "karthik",
+        "workspace": "/home/node/.openclaw/workspace/madurai-retirement-club",
+        "agentDir": "/home/node/.openclaw/agents/karthik"
+      },
+      {
+        "id": "anbu",
+        "name": "anbu",
+        "workspace": "/home/node/.openclaw/workspace/madurai-retirement-club",
+        "agentDir": "/home/node/.openclaw/agents/anbu"
+      },
+      {
+        "id": "selvi",
+        "name": "selvi",
+        "workspace": "/home/node/.openclaw/workspace/madurai-retirement-club",
+        "agentDir": "/home/node/.openclaw/agents/selvi"
+      },
+      {
+        "id": "sundaram",
+        "name": "sundaram",
+        "workspace": "/home/node/.openclaw/workspace/madurai-retirement-club",
+        "agentDir": "/home/node/.openclaw/agents/sundaram"
+      },
+      {
+        "id": "deepa",
+        "name": "deepa",
+        "workspace": "/home/node/.openclaw/workspace/madurai-retirement-club",
+        "agentDir": "/home/node/.openclaw/agents/deepa"
+      },
+      {
+        "id": "velu",
+        "name": "velu",
+        "workspace": "/home/node/.openclaw/workspace/madurai-retirement-club",
+        "agentDir": "/home/node/.openclaw/agents/velu"
+      },
+      {
+        "id": "priya",
+        "name": "priya",
+        "workspace": "/home/node/.openclaw/workspace/madurai-retirement-club",
+        "agentDir": "/home/node/.openclaw/agents/priya"
+      },
+      {
+        "id": "meenakshi",
+        "name": "meenakshi",
+        "workspace": "/home/node/.openclaw/workspace/madurai-retirement-club",
+        "agentDir": "/home/node/.openclaw/agents/meenakshi"
+      }
+    ],
+    "defaults": {
+      "model": {
+        "primary": "openrouter/anthropic/claude-haiku-4-5"
+      },
+      "models": {
+        "openrouter/anthropic/claude-haiku-4-5": {}
+      }
+    }
+  },
+  "bindings": [
+    {
+      "type": "route",
+      "agentId": "rajan-anna",
+      "match": {
+        "channel": "slack",
+        "accountId": "govt-schemes"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "meera",
+      "match": {
+        "channel": "slack",
+        "accountId": "site-design"
+      }
+    }
+  ],
+  "meta": {
+    "lastTouchedVersion": "2026.5.12",
+    "lastTouchedAt": "2026-05-16T00:40:15.522Z"
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "maxResults": 8
+      }
+    }
+  }
+}

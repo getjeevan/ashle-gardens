@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "higgsfield-generate": {
+      "version": "1.0.0",
+      "installedAt": 1778888504475
+    },
+    "higgsfield-product-photoshoot": {
+      "version": "1.0.0",
+      "installedAt": 1778888508019
+    },
+    "higgsfield-soul-id": {
+      "version": "1.0.0",
+      "installedAt": 1778888511506
+    },
+    "jules-api": {
+      "version": "1.0.0",
+      "installedAt": 1778982619875
+    },
+    "jules-cli": {
+      "version": "1.0.2",
+      "installedAt": 1778982623493
+    },
+    "jules-and-lobster": {
+      "version": "1.0.5",
+      "installedAt": 1778982627360
+    }
+  }
+}
