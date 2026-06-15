@@ -1,0 +1,16 @@
+{
+  "generatedBy": "openclaw-plugin-model-catalog-v1",
+  "providers": {
+    "ollama": {
+      "baseUrl": "http://100.112.118.83:11434",
+      "models": [
+        {
+          "name": "devstral:latest",
+          "id": "devstral:latest"
+        }
+      ],
+      "api": "ollama",
+      "apiKey": "OLLAMA_API_KEY"
+    }
+  }
+}
