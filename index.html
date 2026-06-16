@@ -26,7 +26,7 @@
     }
     .nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.3rem;letter-spacing:3px;color:var(--gold);text-decoration:none;text-transform:uppercase}
     .nav-links{display:flex;gap:28px}
-    .nav-links a{color:var(--muted);text-decoration:none;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s;padding:12px 0}
     .nav-links a:hover{color:var(--text)}
 
     /* HERO */
@@ -40,7 +40,7 @@
     }
     .hero::before{
       content:'';position:absolute;inset:0;
-      background:url('images/01-ashle-gardens-aerial-golden-hour.png') center/cover no-repeat;
+      background:url('images/01-ashle-gardens-aerial-golden-hour.webp') center/cover no-repeat;
       opacity:.12;
     }
     .hero-content{position:relative;max-width:780px}
@@ -190,7 +190,8 @@
   <div class="nav-links">
     <a href="#vision">Vision</a>
     <a href="#businesses">Businesses</a>
-    <a href="#visuals">Visuals</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="research.html">Research</a>
     <a href="#site">Site</a>
     <a href="#team">Team</a>
   </div>
@@ -202,7 +203,7 @@
     <div class="hero-tag">Heritage · Circular Economy · Retirement Living</div>
     <h1>Ashle<br/><em>Gardens</em></h1>
     <p>A country-club-style retirement community rooted in Madurai's heritage — where every cost centre is a profit centre, and rural youth become skilled entrepreneurs.</p>
-    <div style="margin-bottom:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a href="research.html" style="background:rgba(58,140,61,.15);border:1px solid rgba(58,140,61,.4);color:#5aab5a;text-decoration:none;padding:10px 24px;border-radius:20px;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;transition:all .2s">View Research Library →</a><a href="index.html#visuals" style="background:rgba(200,168,74,.1);border:1px solid rgba(200,168,74,.3);color:#c8a84a;text-decoration:none;padding:10px 24px;border-radius:20px;font-size:.8rem;letter-spacing:2px;text-transform:uppercase">Concept Visuals</a></div><div class="hero-meta">
+    <div style="margin-bottom:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a href="research.html" style="background:rgba(58,140,61,.15);border:1px solid rgba(58,140,61,.4);color:#5aab5a;text-decoration:none;padding:10px 24px;border-radius:20px;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;transition:all .2s">View Research Library →</a><a href="gallery.html" style="background:rgba(200,168,74,.1);border:1px solid rgba(200,168,74,.3);color:#c8a84a;text-decoration:none;padding:10px 24px;border-radius:20px;font-size:.8rem;letter-spacing:2px;text-transform:uppercase">Concept Gallery</a></div><div class="hero-meta">
       <span>Meenakshipuram, Kariapatti</span>
       <span>Virudhunagar District, Tamil Nadu</span>
       <span>30–40 acres</span>
@@ -274,29 +275,29 @@
   <p class="section-sub">AI-generated concept visuals for the planning and research phase. Professional photography and architecture renders follow when construction begins.</p>
 
   <div class="gallery-grid">
-    <div class="gcard" onclick="lb(0)">
-      <img src="images/01-ashle-gardens-aerial-golden-hour.png" alt="Aerial view" loading="lazy"/>
+    <div class="gcard" onclick="lb(0)" role="button" aria-label="View larger image: Aerial view of Ashle Gardens">
+      <img src="images/01-ashle-gardens-aerial-golden-hour.webp" alt="Aerial view of Ashle Gardens featuring the central lake and heritage buildings during golden hour" loading="lazy"/>
       <div class="gcard-body">
         <div class="gcard-title">Aerial — Golden Hour <span class="ai-badge">AI Concept</span></div>
         <div class="gcard-meta">Lake · Island · Heritage buildings · Eco-capsules · Permaculture farm</div>
       </div>
     </div>
-    <div class="gcard" onclick="lb(1)">
-      <img src="images/02-heritage-room-interior.png" alt="Heritage room" loading="lazy"/>
+    <div class="gcard" onclick="lb(1)" role="button" aria-label="View larger image: Heritage Suite Interior">
+      <img src="images/02-heritage-room-interior.webp" alt="Interior view of a heritage suite showing Athangudi tiles and traditional teak columns" loading="lazy"/>
       <div class="gcard-body">
         <div class="gcard-title">Heritage Suite Interior <span class="ai-badge">AI Concept</span></div>
         <div class="gcard-meta">Athangudi tile · Teak columns · Open courtyard · Warm lantern lighting</div>
       </div>
     </div>
-    <div class="gcard" onclick="lb(2)">
-      <img src="images/03-lake-and-island.png" alt="Lake and island" loading="lazy"/>
+    <div class="gcard" onclick="lb(2)" role="button" aria-label="View larger image: Lake and Island">
+      <img src="images/03-lake-and-island.webp" alt="A serene 3-acre lake with a 1-acre island surrounded by native trees in the morning mist" loading="lazy"/>
       <div class="gcard-body">
         <div class="gcard-title">3-Acre Lake + 1-Acre Island <span class="ai-badge">AI Concept</span></div>
         <div class="gcard-meta">Morning mist · Wooden bridge · Native trees · Capsule eco-house on island</div>
       </div>
     </div>
-    <div class="gcard tall" onclick="lb(3)">
-      <img src="images/04-capsule-eco-house.png" alt="Capsule eco-house" loading="lazy"/>
+    <div class="gcard tall" onclick="lb(3)" role="button" aria-label="View larger image: Capsule Eco-House">
+      <img src="images/04-capsule-eco-house.webp" alt="Modern capsule eco-house made of bamboo and sustainable materials near a water stream" loading="lazy"/>
       <div class="gcard-body">
         <div class="gcard-title">Capsule Eco-House (Airbnb) <span class="ai-badge">AI Concept</span></div>
         <div class="gcard-meta">Bamboo + ferro-cement · Water stream · Fairy lights · Boutique stay experience</div>
@@ -348,12 +349,12 @@
 </section>
 
 <!-- LIGHTBOX -->
-<div class="lb" id="lb" onclick="closeLb(event)">
-  <button class="lb-close" onclick="closeLb()">✕</button>
-  <button class="lb-nav lb-prev" onclick="navLb(-1,event)">‹</button>
-  <img id="lb-img" src="" alt=""/>
+<div class="lb" id="lb" onclick="closeLb(event)" aria-modal="true" role="dialog" aria-label="Image Gallery Lightbox">
+  <button class="lb-close" onclick="closeLb()" aria-label="Close Lightbox">✕</button>
+  <button class="lb-nav lb-prev" onclick="navLb(-1,event)" aria-label="Previous Image">‹</button>
+  <img id="lb-img" src="" alt="Enlarged concept visual"/>
   <p class="lb-cap" id="lb-cap"></p>
-  <button class="lb-nav lb-next" onclick="navLb(1,event)">›</button>
+  <button class="lb-nav lb-next" onclick="navLb(1,event)" aria-label="Next Image">›</button>
 </div>
 
 <footer>
@@ -367,10 +368,10 @@
 
 <script>
 const IMGS=[
-  {s:'images/01-ashle-gardens-aerial-golden-hour.png',c:'Aerial — Golden Hour · Lake · Island · Heritage Buildings · Eco-Capsules'},
-  {s:'images/02-heritage-room-interior.png',c:'Heritage Suite · Athangudi Tile · Teak Columns · Open Courtyard'},
-  {s:'images/03-lake-and-island.png',c:'3-Acre Lake + 1-Acre Island · Morning Mist · Wooden Bridge'},
-  {s:'images/04-capsule-eco-house.png',c:'Capsule Eco-House · Bamboo · Water Stream · Fairy Lights'},
+  {s:'images/01-ashle-gardens-aerial-golden-hour.webp',c:'Aerial — Golden Hour: Lake, Island, and Heritage Buildings integrated with Permaculture Farm.'},
+  {s:'images/02-heritage-room-interior.webp',c:'Heritage Suite: Athangudi Tile, Teak Columns, and Open Courtyard architecture.'},
+  {s:'images/03-lake-and-island.webp',c:'3-Acre Lake + 1-Acre Island: A focal point for the circular water management system.'},
+  {s:'images/04-capsule-eco-house.webp',c:'Capsule Eco-House: Sustainable, modular housing for guests and residents.'},
 ];
 let cur=0;
 function lb(i){cur=i;document.getElementById('lb-img').src=IMGS[i].s;document.getElementById('lb-cap').textContent=IMGS[i].c;document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden';}
