@@ -100,10 +100,10 @@
     ],
     "defaults": {
       "model": {
-        "primary": "ollama/devstral:latest"
+        "primary": "ollama/gemma4:26b"
       },
       "models": {
-        "ollama/devstral:latest": {},
+        "ollama/gemma4:26b": {},
         "anthropic/claude-sonnet-4-6": {}
       }
     }
@@ -127,14 +127,38 @@
     }
   ],
   "meta": {
-    "lastTouchedVersion": "2026.5.19",
-    "lastTouchedAt": "2026-05-21T03:01:50.508Z"
+    "lastTouchedVersion": "2026.6.10",
+    "lastTouchedAt": "2026-06-26T03:42:13.204Z"
   },
   "tools": {
     "web": {
       "search": {
         "enabled": true,
         "maxResults": 8
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "ollama": {
+        "baseUrl": "http://100.112.118.83:11434",
+        "api": "ollama",
+        "models": [
+          {
+            "id": "gemma4:26b",
+            "name": "gemma4:26b",
+            "maxTokens": 16384,
+            "contextWindow": 32768
+          }
+        ]
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:oauth": {
+        "provider": "anthropic",
+        "mode": "token"
       }
     }
   }
