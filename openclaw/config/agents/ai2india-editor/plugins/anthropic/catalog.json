@@ -31,58 +31,6 @@
           }
         },
         {
-          "id": "claude-haiku-4-5",
-          "name": "Claude Haiku 4.5",
-          "api": "anthropic-messages",
-          "baseUrl": "https://api.anthropic.com",
-          "reasoning": true,
-          "input": [
-            "text",
-            "image"
-          ],
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
-            "cacheWrite": 0
-          },
-          "contextWindow": 200000,
-          "maxTokens": 64000,
-          "mediaInput": {
-            "image": {
-              "maxSidePx": 1568,
-              "preferredSidePx": 1568,
-              "tokenMode": "provider"
-            }
-          }
-        },
-        {
-          "id": "claude-haiku-4-5-20251001",
-          "name": "Claude Haiku 4.5",
-          "api": "anthropic-messages",
-          "baseUrl": "https://api.anthropic.com",
-          "reasoning": true,
-          "input": [
-            "text",
-            "image"
-          ],
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
-            "cacheWrite": 0
-          },
-          "contextWindow": 200000,
-          "maxTokens": 64000,
-          "mediaInput": {
-            "image": {
-              "maxSidePx": 1568,
-              "preferredSidePx": 1568,
-              "tokenMode": "provider"
-            }
-          }
-        },
-        {
           "id": "claude-opus-4-6",
           "name": "Claude Opus 4.6",
           "api": "anthropic-messages",
