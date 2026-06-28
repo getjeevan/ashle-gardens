@@ -18,7 +18,7 @@
     nav{position:sticky;top:0;z-index:100;background:rgba(12,26,14,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px;}
     .nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.3rem;letter-spacing:3px;color:var(--gold);text-decoration:none;text-transform:uppercase}
     .nav-links{display:flex;gap:24px}
-    .nav-links a{color:var(--muted);text-decoration:none;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s;padding:12px 0}
     .nav-links a:hover,.nav-links a.active{color:var(--text)}
 
     .page-hero{padding:60px 40px 40px;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0a150c 0%,var(--bg) 100%)}
@@ -84,7 +84,7 @@
   <div class="nav-links">
     <a href="index.html">Overview</a>
     <a href="research.html" class="active">Research</a>
-    <a href="index.html#visuals">Visuals</a>
+    <a href="gallery.html">Gallery</a>
     <a href="index.html#site">Site</a>
   </div>
 </nav>
@@ -103,6 +103,7 @@
 
 <div class="controls">
   <div class="search-wrap">
+    <label for="search-input" class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;">Search research library</label>
     <input type="text" id="search-input" class="search-input" placeholder="Search research library..."/>
   </div>
   <div class="filter-chips" id="filter-chips">

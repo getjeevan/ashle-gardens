@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Ashle Gardens — Visual Gallery. Explore the heritage and circular economy concept of Ashle Gardens through AI-generated visuals."/>
+  <title>Gallery — Ashle Gardens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --bg:#0c1a0e; --surface:#132016; --surface2:#1a2c1c;
+      --border:rgba(255,255,255,0.07); --text:#e8f0e6;
+      --muted:#7a9878; --gold:#c8a84a; --green:#5aab5a; --accent:#3a8c3d;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+
+    /* NAV */
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(12,26,14,0.92);backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border);
+      padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px;
+    }
+    .nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.3rem;letter-spacing:3px;color:var(--gold);text-decoration:none;text-transform:uppercase}
+    .nav-links{display:flex;gap:28px}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s;padding:12px 0}
+    .nav-links a:hover,.nav-links a.active{color:var(--text)}
+
+    /* HEADER */
+    .page-header{
+      padding:80px 40px 40px;text-align:center;
+      background:linear-gradient(180deg,#0a150c 0%,var(--bg) 100%);
+    }
+    .page-label{
+      font-size:.68rem;letter-spacing:3px;text-transform:uppercase;
+      color:var(--green);margin-bottom:12px;
+    }
+    .page-title{
+      font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);
+      font-weight:300;color:var(--gold);margin-bottom:16px;letter-spacing:2px;
+    }
+    .page-sub{font-size:.9rem;color:var(--muted);max-width:600px;line-height:1.8;margin:0 auto 48px}
+
+    /* GALLERY GRID */
+    main{flex:1;padding:40px;max-width:1200px;margin:0 auto;width:100%}
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(350px, 1fr));
+      gap:24px;
+    }
+    @media(max-width:700px){.gallery-grid{grid-template-columns:1fr}}
+
+    .gcard{
+      background:var(--surface);border:1px solid var(--border);
+      border-radius:12px;overflow:hidden;cursor:pointer;
+      transition:transform .2s,border-color .2s,box-shadow .2s;
+    }
+    .gcard:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 40px rgba(0,0,0,.5)}
+    .gcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+    .gcard.tall img{aspect-ratio:4/3}
+    .gcard-body{padding:18px 20px}
+    .gcard-title{font-size:1rem;color:var(--text);margin-bottom:6px}
+    .gcard-meta{font-size:.75rem;color:var(--muted);line-height:1.5}
+    .ai-badge{
+      display:inline-block;font-size:.62rem;padding:2px 8px;
+      background:rgba(201,168,74,.1);border:1px solid rgba(201,168,74,.25);
+      color:var(--gold);border-radius:8px;margin-left:8px;
+    }
+
+    /* LIGHTBOX */
+    .lb{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.95);
+      flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px}
+    .lb.open{display:flex}
+    .lb img{max-width:100%;max-height:80vh;object-fit:contain;border-radius:8px}
+    .lb-cap{color:var(--muted);font-size:.82rem;text-align:center;max-width:600px}
+    .lb-close{position:absolute;top:18px;right:22px;font-size:1.6rem;color:var(--muted);cursor:pointer;background:none;border:none;transition:color .15s}
+    .lb-close:hover{color:var(--text)}
+    .lb-nav{position:absolute;top:50%;transform:translateY(-50%);
+      background:rgba(255,255,255,.07);border:1px solid var(--border);color:var(--text);
+      font-size:1.4rem;width:46px;height:46px;border-radius:50%;cursor:pointer;
+      display:flex;align-items:center;justify-content:center;transition:background .15s}
+    .lb-nav:hover{background:rgba(255,255,255,.14)}
+    .lb-prev{left:18px}.lb-next{right:18px}
+
+    /* FOOTER */
+    footer{
+      text-align:center;padding:40px;color:var(--muted);font-size:.72rem;
+      letter-spacing:1px;border-top:1px solid var(--border);
+      background:var(--surface);
+    }
+    footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border)}
+    footer a:hover{color:var(--text)}
+
+    @media(max-width:768px){
+      nav{padding:0 20px}.nav-links{gap:16px}
+      .page-header{padding:60px 20px 30px}
+      main{padding:20px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">Ashle Gardens</a>
+  <div class="nav-links">
+    <a href="index.html">Overview</a>
+    <a href="research.html">Research</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="index.html#site">Site</a>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-label">Visualizing the Vision</div>
+  <h1 class="page-title">Concept Gallery</h1>
+  <p class="page-sub">AI-generated concept visuals for the planning and research phase. These images represent the intended aesthetic and functional integration of heritage architecture with circular economy systems.</p>
+</header>
+
+<main>
+  <div class="gallery-grid">
+    <div class="gcard" onclick="lb(0)" role="button" aria-label="View larger image: Aerial view of Ashle Gardens">
+      <img src="images/01-ashle-gardens-aerial-golden-hour.webp" alt="Aerial view of Ashle Gardens during golden hour showing the lake and heritage buildings" loading="lazy"/>
+      <div class="gcard-body">
+        <div class="gcard-title">Aerial — Golden Hour <span class="ai-badge">AI Concept</span></div>
+        <div class="gcard-meta">An expansive view of the 30-40 acre campus featuring the central lake, integrated heritage structures, and permaculture zones.</div>
+      </div>
+    </div>
+    <div class="gcard" onclick="lb(1)" role="button" aria-label="View larger image: Heritage Suite Interior">
+      <img src="images/02-heritage-room-interior.webp" alt="Interior of a heritage suite with Athangudi tiles and teak columns" loading="lazy"/>
+      <div class="gcard-body">
+        <div class="gcard-title">Heritage Suite Interior <span class="ai-badge">AI Concept</span></div>
+        <div class="gcard-meta">Showcasing the Naalukettu style with open courtyards, traditional Athangudi flooring, and warm, natural lighting.</div>
+      </div>
+    </div>
+    <div class="gcard" onclick="lb(2)" role="button" aria-label="View larger image: Lake and Island">
+      <img src="images/03-lake-and-island.webp" alt="3-acre lake with a 1-acre island in the mist" loading="lazy"/>
+      <div class="gcard-body">
+        <div class="gcard-title">Lake + Island <span class="ai-badge">AI Concept</span></div>
+        <div class="gcard-meta">The central water body serves both aesthetic and functional purposes, aiding in site cooling and biodiversity.</div>
+      </div>
+    </div>
+    <div class="gcard tall" onclick="lb(3)" role="button" aria-label="View larger image: Capsule Eco-House">
+      <img src="images/04-capsule-eco-house.webp" alt="Eco-friendly capsule house on the island" loading="lazy"/>
+      <div class="gcard-body">
+        <div class="gcard-title">Capsule Eco-House <span class="ai-badge">AI Concept</span></div>
+        <div class="gcard-meta">Innovative, low-impact housing units for Airbnb guests and research residents, built with bamboo and sustainable materials.</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="closeLb(event)" aria-modal="true" role="dialog" aria-label="Image Gallery Lightbox">
+  <button class="lb-close" onclick="closeLb()" aria-label="Close Lightbox">✕</button>
+  <button class="lb-nav lb-prev" onclick="navLb(-1,event)" aria-label="Previous Image">‹</button>
+  <img id="lb-img" src="" alt="Enlarged concept visual"/>
+  <p class="lb-cap" id="lb-cap"></p>
+  <button class="lb-nav lb-next" onclick="navLb(1,event)" aria-label="Next Image">›</button>
+</div>
+
+<footer>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);letter-spacing:3px;margin-bottom:12px">ASHLE GARDENS</p>
+  Meenakshipuram · Kariapatti · Virudhunagar · Tamil Nadu<br/>
+  <br/>
+  <a href="index.html">Back to Home</a>
+  &nbsp;·&nbsp;
+  <a href="research.html">Research Library</a>
+</footer>
+
+<script>
+const IMGS=[
+  {s:'images/01-ashle-gardens-aerial-golden-hour.webp',c:'Aerial — Golden Hour: Lake, Island, and Heritage Buildings integrated with Permaculture Farm.'},
+  {s:'images/02-heritage-room-interior.webp',c:'Heritage Suite: Athangudi Tile, Teak Columns, and Open Courtyard architecture.'},
+  {s:'images/03-lake-and-island.webp',c:'3-Acre Lake + 1-Acre Island: A focal point for the circular water management system.'},
+  {s:'images/04-capsule-eco-house.webp',c:'Capsule Eco-House: Sustainable, modular housing for guests and residents.'},
+];
+let cur=0;
+function lb(i){cur=i;document.getElementById('lb-img').src=IMGS[i].s;document.getElementById('lb-cap').textContent=IMGS[i].c;document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden';}
+function closeLb(e){if(!e||e.target===document.getElementById('lb')||e.target.classList.contains('lb-close')){document.getElementById('lb').classList.remove('open');document.body.style.overflow='';}}
+function navLb(d,e){e&&e.stopPropagation();cur=(cur+d+IMGS.length)%IMGS.length;lb(cur);}
+document.addEventListener('keydown',e=>{if(!document.getElementById('lb').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowRight')navLb(1);if(e.key==='ArrowLeft')navLb(-1);});
+</script>
+</body>
+</html>
