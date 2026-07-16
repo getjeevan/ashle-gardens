@@ -75,15 +75,36 @@
         "name": "meenakshi",
         "workspace": "/home/node/.openclaw/workspace/madurai-retirement-club",
         "agentDir": "/home/node/.openclaw/agents/meenakshi"
+      },
+      {
+        "id": "selvi-bh",
+        "name": "selvi-bh",
+        "workspace": "/home/node/.openclaw/workspace/biryani-house",
+        "agentDir": "/home/node/.openclaw/agents/selvi-bh"
+      },
+      {
+        "id": "kumar-bh",
+        "name": "kumar-bh",
+        "workspace": "/home/node/.openclaw/workspace/biryani-house",
+        "agentDir": "/home/node/.openclaw/agents/kumar-bh"
+      },
+      {
+        "id": "ai2india-editor",
+        "name": "ai2india-editor",
+        "workspace": "/home/node/.openclaw/workspace/ai2india",
+        "agentDir": "/home/node/.openclaw/agents/ai2india-editor",
+        "models": {
+          "anthropic/claude-sonnet-4-6": {}
+        }
       }
     ],
     "defaults": {
       "model": {
-        "primary": "anthropic/claude-sonnet-4-5"
+        "primary": "ollama/gemma4:26b"
       },
       "models": {
-        "openrouter/anthropic/claude-haiku-4-5": {},
-        "anthropic/claude-sonnet-4-5": {}
+        "ollama/gemma4:26b": {},
+        "anthropic/claude-sonnet-4-6": {}
       }
     }
   },
@@ -106,14 +127,38 @@
     }
   ],
   "meta": {
-    "lastTouchedVersion": "2026.5.12",
-    "lastTouchedAt": "2026-05-18T17:01:10.510Z"
+    "lastTouchedVersion": "2026.6.10",
+    "lastTouchedAt": "2026-06-26T03:42:13.204Z"
   },
   "tools": {
     "web": {
       "search": {
         "enabled": true,
         "maxResults": 8
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "ollama": {
+        "baseUrl": "http://100.112.118.83:11434",
+        "api": "ollama",
+        "models": [
+          {
+            "id": "gemma4:26b",
+            "name": "gemma4:26b",
+            "maxTokens": 16384,
+            "contextWindow": 32768
+          }
+        ]
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:oauth": {
+        "provider": "anthropic",
+        "mode": "token"
       }
     }
   }

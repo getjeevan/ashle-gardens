@@ -87,14 +87,24 @@
         "name": "kumar-bh",
         "workspace": "/home/node/.openclaw/workspace/biryani-house",
         "agentDir": "/home/node/.openclaw/agents/kumar-bh"
+      },
+      {
+        "id": "ai2india-editor",
+        "name": "ai2india-editor",
+        "workspace": "/home/node/.openclaw/workspace/ai2india",
+        "agentDir": "/home/node/.openclaw/agents/ai2india-editor",
+        "models": {
+          "anthropic/claude-sonnet-4-6": {}
+        }
       }
     ],
     "defaults": {
       "model": {
-        "primary": "ollama/devstral:latest"
+        "primary": "ollama/gemma4:26b"
       },
       "models": {
-        "ollama/devstral:latest": {}
+        "ollama/gemma4:26b": {},
+        "anthropic/claude-sonnet-4-6": {}
       }
     }
   },
@@ -117,14 +127,63 @@
     }
   ],
   "meta": {
-    "lastTouchedVersion": "2026.5.19",
-    "lastTouchedAt": "2026-05-21T03:01:50.508Z"
+    "lastTouchedVersion": "2026.6.10",
+    "lastTouchedAt": "2026-06-28T19:31:27.644Z"
   },
   "tools": {
     "web": {
       "search": {
         "enabled": true,
-        "maxResults": 8
+        "maxResults": 6,
+        "provider": "brave",
+        "timeoutSeconds": 30
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "ollama": {
+        "baseUrl": "http://100.112.118.83:11434",
+        "api": "ollama",
+        "models": [
+          {
+            "id": "gemma4:26b",
+            "name": "gemma4:26b",
+            "maxTokens": 16384,
+            "contextWindow": 32768
+          }
+        ]
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:oauth": {
+        "provider": "anthropic",
+        "mode": "token"
+      },
+      "anthropic:apikey": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      }
+    },
+    "order": {
+      "anthropic": [
+        "anthropic:apikey",
+        "anthropic:oauth"
+      ]
+    }
+  },
+  "plugins": {
+    "entries": {
+      "brave": {
+        "config": {
+          "webSearch": {
+            "apiKey": "BSAlsBa2jVCtZ0rEIGDjkTRX4iqOpbM",
+            "mode": "web",
+            "baseUrl": "https://api.search.brave.com"
+          }
+        }
       }
     }
   }
