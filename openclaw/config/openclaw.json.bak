@@ -100,11 +100,15 @@
     ],
     "defaults": {
       "model": {
-        "primary": "ollama/gemma4:26b"
+        "primary": "ollama/gemma4:26b",
+        "fallbacks": [
+          "nvidia/nemotron-3-ultra-550b-a55b"
+        ]
       },
       "models": {
         "ollama/gemma4:26b": {},
-        "anthropic/claude-sonnet-4-6": {}
+        "anthropic/claude-sonnet-4-6": {},
+        "nvidia/nemotron-3-ultra-550b-a55b": {}
       }
     }
   },
@@ -127,8 +131,8 @@
     }
   ],
   "meta": {
-    "lastTouchedVersion": "2026.6.10",
-    "lastTouchedAt": "2026-06-28T23:23:28.952Z"
+    "lastTouchedVersion": "2026.6.11",
+    "lastTouchedAt": "2026-07-03T03:40:59.453Z"
   },
   "tools": {
     "web": {

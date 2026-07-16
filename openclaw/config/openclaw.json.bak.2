@@ -128,13 +128,15 @@
   ],
   "meta": {
     "lastTouchedVersion": "2026.6.10",
-    "lastTouchedAt": "2026-06-26T03:42:13.204Z"
+    "lastTouchedAt": "2026-06-28T19:31:27.644Z"
   },
   "tools": {
     "web": {
       "search": {
         "enabled": true,
-        "maxResults": 8
+        "maxResults": 6,
+        "provider": "brave",
+        "timeoutSeconds": 30
       }
     }
   },
@@ -159,6 +161,29 @@
       "anthropic:oauth": {
         "provider": "anthropic",
         "mode": "token"
+      },
+      "anthropic:apikey": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      }
+    },
+    "order": {
+      "anthropic": [
+        "anthropic:apikey",
+        "anthropic:oauth"
+      ]
+    }
+  },
+  "plugins": {
+    "entries": {
+      "brave": {
+        "config": {
+          "webSearch": {
+            "apiKey": "BSAlsBa2jVCtZ0rEIGDjkTRX4iqOpbM",
+            "mode": "web",
+            "baseUrl": "https://api.search.brave.com"
+          }
+        }
       }
     }
   }

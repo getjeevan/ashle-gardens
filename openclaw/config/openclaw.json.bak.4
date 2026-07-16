@@ -87,14 +87,24 @@
         "name": "kumar-bh",
         "workspace": "/home/node/.openclaw/workspace/biryani-house",
         "agentDir": "/home/node/.openclaw/agents/kumar-bh"
+      },
+      {
+        "id": "ai2india-editor",
+        "name": "ai2india-editor",
+        "workspace": "/home/node/.openclaw/workspace/ai2india",
+        "agentDir": "/home/node/.openclaw/agents/ai2india-editor",
+        "models": {
+          "anthropic/claude-sonnet-4-6": {}
+        }
       }
     ],
     "defaults": {
       "model": {
-        "primary": "ollama/devstral:latest"
+        "primary": "ollama/gemma4:26b"
       },
       "models": {
-        "ollama/devstral:latest": {}
+        "ollama/gemma4:26b": {},
+        "anthropic/claude-sonnet-4-6": {}
       }
     }
   },
@@ -125,6 +135,22 @@
       "search": {
         "enabled": true,
         "maxResults": 8
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "ollama": {
+        "baseUrl": "http://100.112.118.83:11434",
+        "api": "ollama",
+        "models": [
+          {
+            "id": "gemma4:26b",
+            "name": "gemma4:26b",
+            "maxTokens": 16384,
+            "contextWindow": 32768
+          }
+        ]
       }
     }
   }

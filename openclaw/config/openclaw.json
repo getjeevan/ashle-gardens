@@ -132,7 +132,7 @@
   ],
   "meta": {
     "lastTouchedVersion": "2026.6.11",
-    "lastTouchedAt": "2026-07-03T03:40:59.453Z"
+    "lastTouchedAt": "2026-07-16T03:49:42.602Z"
   },
   "tools": {
     "web": {
@@ -190,6 +190,15 @@
         },
         "enabled": true
       }
+    }
+  },
+  "cron": {
+    "retry": {
+      "backoffMs": [
+        60000,
+        300000,
+        1200000
+      ]
     }
   }
 }
