@@ -5,8 +5,8 @@
       "baseUrl": "https://ollama.com",
       "models": [
         {
-          "id": "glm-5.2",
-          "name": "glm-5.2",
+          "id": "deepseek-v4-flash",
+          "name": "deepseek-v4-flash",
           "reasoning": true,
           "input": [
             "text"
@@ -17,7 +17,7 @@
             "cacheRead": 0,
             "cacheWrite": 0
           },
-          "contextWindow": 1000000,
+          "contextWindow": 1048576,
           "maxTokens": 8192,
           "compat": {
             "supportsTools": true,
@@ -25,49 +25,9 @@
           }
         },
         {
-          "id": "deepseek-v4-pro",
-          "name": "deepseek-v4-pro",
+          "id": "minimax-m3",
+          "name": "minimax-m3",
           "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
-            "cacheWrite": 0
-          },
-          "contextWindow": 524288,
-          "maxTokens": 8192,
-          "compat": {
-            "supportsTools": true,
-            "supportsUsageInStreaming": true
-          }
-        },
-        {
-          "id": "gpt-oss:120b",
-          "name": "gpt-oss:120b",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
-            "cacheWrite": 0
-          },
-          "contextWindow": 131072,
-          "maxTokens": 8192,
-          "compat": {
-            "supportsTools": true,
-            "supportsUsageInStreaming": true
-          }
-        },
-        {
-          "id": "mistral-large-3:675b",
-          "name": "mistral-large-3:675b",
-          "reasoning": false,
           "input": [
             "text",
             "image"
@@ -78,7 +38,7 @@
             "cacheRead": 0,
             "cacheWrite": 0
           },
-          "contextWindow": 262144,
+          "contextWindow": 524288,
           "maxTokens": 8192,
           "compat": {
             "supportsTools": true,
@@ -128,8 +88,28 @@
           }
         },
         {
-          "id": "gemma4:31b",
-          "name": "gemma4:31b",
+          "id": "deepseek-v4-pro",
+          "name": "deepseek-v4-pro",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 524288,
+          "maxTokens": 8192,
+          "compat": {
+            "supportsTools": true,
+            "supportsUsageInStreaming": true
+          }
+        },
+        {
+          "id": "qwen3.5:397b",
+          "name": "qwen3.5:397b",
           "reasoning": true,
           "input": [
             "text",
@@ -149,8 +129,8 @@
           }
         },
         {
-          "id": "nemotron-3-ultra",
-          "name": "nemotron-3-ultra",
+          "id": "glm-5.2",
+          "name": "glm-5.2",
           "reasoning": true,
           "input": [
             "text"
@@ -161,7 +141,27 @@
             "cacheRead": 0,
             "cacheWrite": 0
           },
-          "contextWindow": 262144,
+          "contextWindow": 1000000,
+          "maxTokens": 8192,
+          "compat": {
+            "supportsTools": true,
+            "supportsUsageInStreaming": true
+          }
+        },
+        {
+          "id": "gpt-oss:120b",
+          "name": "gpt-oss:120b",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 131072,
           "maxTokens": 8192,
           "compat": {
             "supportsTools": true,
@@ -209,89 +209,8 @@
           }
         },
         {
-          "id": "minimax-m2.7",
-          "name": "minimax-m2.7",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
-            "cacheWrite": 0
-          },
-          "contextWindow": 196608,
-          "maxTokens": 8192,
-          "compat": {
-            "supportsTools": true,
-            "supportsUsageInStreaming": true
-          }
-        },
-        {
-          "id": "minimax-m2.5",
-          "name": "minimax-m2.5",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
-            "cacheWrite": 0
-          },
-          "contextWindow": 196608,
-          "maxTokens": 8192,
-          "compat": {
-            "supportsTools": true,
-            "supportsUsageInStreaming": true
-          }
-        },
-        {
-          "id": "deepseek-v4-flash",
-          "name": "deepseek-v4-flash",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
-            "cacheWrite": 0
-          },
-          "contextWindow": 1048576,
-          "maxTokens": 8192,
-          "compat": {
-            "supportsTools": true,
-            "supportsUsageInStreaming": true
-          }
-        },
-        {
-          "id": "minimax-m3",
-          "name": "minimax-m3",
-          "reasoning": true,
-          "input": [
-            "text",
-            "image"
-          ],
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
-            "cacheWrite": 0
-          },
-          "contextWindow": 524288,
-          "maxTokens": 8192,
-          "compat": {
-            "supportsTools": true,
-            "supportsUsageInStreaming": true
-          }
-        },
-        {
-          "id": "nemotron-3-super",
-          "name": "nemotron-3-super",
+          "id": "nemotron-3-ultra",
+          "name": "nemotron-3-ultra",
           "reasoning": true,
           "input": [
             "text"
@@ -331,12 +250,93 @@
           }
         },
         {
-          "id": "qwen3.5:397b",
-          "name": "qwen3.5:397b",
+          "id": "minimax-m2.5",
+          "name": "minimax-m2.5",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 196608,
+          "maxTokens": 8192,
+          "compat": {
+            "supportsTools": true,
+            "supportsUsageInStreaming": true
+          }
+        },
+        {
+          "id": "gemma4:31b",
+          "name": "gemma4:31b",
           "reasoning": true,
           "input": [
             "text",
             "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 8192,
+          "compat": {
+            "supportsTools": true,
+            "supportsUsageInStreaming": true
+          }
+        },
+        {
+          "id": "minimax-m2.7",
+          "name": "minimax-m2.7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 196608,
+          "maxTokens": 8192,
+          "compat": {
+            "supportsTools": true,
+            "supportsUsageInStreaming": true
+          }
+        },
+        {
+          "id": "mistral-large-3:675b",
+          "name": "mistral-large-3:675b",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 8192,
+          "compat": {
+            "supportsTools": true,
+            "supportsUsageInStreaming": true
+          }
+        },
+        {
+          "id": "nemotron-3-super",
+          "name": "nemotron-3-super",
+          "reasoning": true,
+          "input": [
+            "text"
           ],
           "cost": {
             "input": 0,
