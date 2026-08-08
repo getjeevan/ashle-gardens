@@ -100,11 +100,15 @@
     ],
     "defaults": {
       "model": {
-        "primary": "ollama/gemma4:26b"
+        "primary": "ollama/gemma4:26b",
+        "fallbacks": [
+          "nvidia/nemotron-3-ultra-550b-a55b"
+        ]
       },
       "models": {
         "ollama/gemma4:26b": {},
-        "anthropic/claude-sonnet-4-6": {}
+        "anthropic/claude-sonnet-4-6": {},
+        "nvidia/nemotron-3-ultra-550b-a55b": {}
       }
     }
   },
@@ -127,14 +131,16 @@
     }
   ],
   "meta": {
-    "lastTouchedVersion": "2026.6.10",
-    "lastTouchedAt": "2026-06-26T03:42:13.204Z"
+    "lastTouchedVersion": "2026.6.11",
+    "lastTouchedAt": "2026-08-08T15:14:00.493Z"
   },
   "tools": {
     "web": {
       "search": {
         "enabled": true,
-        "maxResults": 8
+        "maxResults": 6,
+        "provider": "brave",
+        "timeoutSeconds": 30
       }
     }
   },
@@ -151,6 +157,32 @@
             "contextWindow": 32768
           }
         ]
+      },
+      "omniroute": {
+        "baseUrl": "http://omniroute:20128/v1",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "auto/claude-sonnet",
+            "name": "OmniRoute Claude Sonnet (auto)",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 64000
+          },
+          {
+            "id": "auto/best-reasoning",
+            "name": "OmniRoute Best Reasoning (auto)",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 64000
+          }
+        ]
       }
     }
   },
@@ -159,7 +191,40 @@
       "anthropic:oauth": {
         "provider": "anthropic",
         "mode": "token"
+      },
+      "anthropic:apikey": {
+        "provider": "anthropic",
+        "mode": "api_key"
       }
+    },
+    "order": {
+      "anthropic": [
+        "anthropic:apikey",
+        "anthropic:oauth"
+      ]
+    }
+  },
+  "plugins": {
+    "entries": {
+      "brave": {
+        "config": {
+          "webSearch": {
+            "apiKey": "BSAlsBa2jVCtZ0rEIGDjkTRX4iqOpbM",
+            "mode": "web",
+            "baseUrl": "https://api.search.brave.com"
+          }
+        },
+        "enabled": true
+      }
+    }
+  },
+  "cron": {
+    "retry": {
+      "backoffMs": [
+        60000,
+        300000,
+        1200000
+      ]
     }
   }
 }

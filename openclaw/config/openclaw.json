@@ -94,7 +94,15 @@
         "workspace": "/home/node/.openclaw/workspace/ai2india",
         "agentDir": "/home/node/.openclaw/agents/ai2india-editor",
         "models": {
-          "anthropic/claude-sonnet-4-6": {}
+          "anthropic/claude-sonnet-4-6": {},
+          "omniroute/auto/claude-sonnet": {},
+          "omniroute/auto/best-reasoning": {}
+        },
+        "model": {
+          "primary": "omniroute/auto/claude-sonnet",
+          "fallbacks": [
+            "omniroute/auto/best-reasoning"
+          ]
         }
       }
     ],
@@ -132,7 +140,7 @@
   ],
   "meta": {
     "lastTouchedVersion": "2026.6.11",
-    "lastTouchedAt": "2026-07-16T03:49:42.602Z"
+    "lastTouchedAt": "2026-08-08T15:21:36.405Z"
   },
   "tools": {
     "web": {
@@ -157,6 +165,32 @@
             "contextWindow": 32768
           }
         ]
+      },
+      "omniroute": {
+        "baseUrl": "http://omniroute:20128/v1",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "auto/claude-sonnet",
+            "name": "OmniRoute Claude Sonnet (auto)",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 64000
+          },
+          {
+            "id": "auto/best-reasoning",
+            "name": "OmniRoute Best Reasoning (auto)",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 64000
+          }
+        ]
       }
     }
   },
@@ -168,6 +202,10 @@
       },
       "anthropic:apikey": {
         "provider": "anthropic",
+        "mode": "api_key"
+      },
+      "omniroute:manual": {
+        "provider": "omniroute",
         "mode": "api_key"
       }
     },

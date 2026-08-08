@@ -94,17 +94,30 @@
         "workspace": "/home/node/.openclaw/workspace/ai2india",
         "agentDir": "/home/node/.openclaw/agents/ai2india-editor",
         "models": {
-          "anthropic/claude-sonnet-4-6": {}
+          "anthropic/claude-sonnet-4-6": {},
+          "omniroute/auto/claude-sonnet": {},
+          "omniroute/auto/best-reasoning": {}
+        },
+        "model": {
+          "primary": "omniroute/auto/claude-sonnet",
+          "fallbacks": [
+            "omniroute/auto/best-reasoning",
+            "anthropic/claude-sonnet-4-6"
+          ]
         }
       }
     ],
     "defaults": {
       "model": {
-        "primary": "ollama/gemma4:26b"
+        "primary": "ollama/gemma4:26b",
+        "fallbacks": [
+          "nvidia/nemotron-3-ultra-550b-a55b"
+        ]
       },
       "models": {
         "ollama/gemma4:26b": {},
-        "anthropic/claude-sonnet-4-6": {}
+        "anthropic/claude-sonnet-4-6": {},
+        "nvidia/nemotron-3-ultra-550b-a55b": {}
       }
     }
   },
@@ -127,8 +140,8 @@
     }
   ],
   "meta": {
-    "lastTouchedVersion": "2026.6.10",
-    "lastTouchedAt": "2026-06-28T23:23:28.952Z"
+    "lastTouchedVersion": "2026.6.11",
+    "lastTouchedAt": "2026-08-08T15:15:19.908Z"
   },
   "tools": {
     "web": {
@@ -151,6 +164,32 @@
             "name": "gemma4:26b",
             "maxTokens": 16384,
             "contextWindow": 32768
+          }
+        ]
+      },
+      "omniroute": {
+        "baseUrl": "http://omniroute:20128/v1",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "auto/claude-sonnet",
+            "name": "OmniRoute Claude Sonnet (auto)",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 64000
+          },
+          {
+            "id": "auto/best-reasoning",
+            "name": "OmniRoute Best Reasoning (auto)",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 64000
           }
         ]
       }
@@ -186,6 +225,15 @@
         },
         "enabled": true
       }
+    }
+  },
+  "cron": {
+    "retry": {
+      "backoffMs": [
+        60000,
+        300000,
+        1200000
+      ]
     }
   }
 }

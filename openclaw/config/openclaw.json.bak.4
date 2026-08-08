@@ -100,11 +100,15 @@
     ],
     "defaults": {
       "model": {
-        "primary": "ollama/gemma4:26b"
+        "primary": "ollama/gemma4:26b",
+        "fallbacks": [
+          "nvidia/nemotron-3-ultra-550b-a55b"
+        ]
       },
       "models": {
         "ollama/gemma4:26b": {},
-        "anthropic/claude-sonnet-4-6": {}
+        "anthropic/claude-sonnet-4-6": {},
+        "nvidia/nemotron-3-ultra-550b-a55b": {}
       }
     }
   },
@@ -127,14 +131,16 @@
     }
   ],
   "meta": {
-    "lastTouchedVersion": "2026.5.19",
-    "lastTouchedAt": "2026-05-21T03:01:50.508Z"
+    "lastTouchedVersion": "2026.6.11",
+    "lastTouchedAt": "2026-07-16T03:49:42.602Z"
   },
   "tools": {
     "web": {
       "search": {
         "enabled": true,
-        "maxResults": 8
+        "maxResults": 6,
+        "provider": "brave",
+        "timeoutSeconds": 30
       }
     }
   },
@@ -152,6 +158,47 @@
           }
         ]
       }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:oauth": {
+        "provider": "anthropic",
+        "mode": "token"
+      },
+      "anthropic:apikey": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      }
+    },
+    "order": {
+      "anthropic": [
+        "anthropic:apikey",
+        "anthropic:oauth"
+      ]
+    }
+  },
+  "plugins": {
+    "entries": {
+      "brave": {
+        "config": {
+          "webSearch": {
+            "apiKey": "BSAlsBa2jVCtZ0rEIGDjkTRX4iqOpbM",
+            "mode": "web",
+            "baseUrl": "https://api.search.brave.com"
+          }
+        },
+        "enabled": true
+      }
+    }
+  },
+  "cron": {
+    "retry": {
+      "backoffMs": [
+        60000,
+        300000,
+        1200000
+      ]
     }
   }
 }
