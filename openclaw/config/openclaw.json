@@ -116,7 +116,9 @@
       "models": {
         "ollama/gemma4:26b": {},
         "anthropic/claude-sonnet-4-6": {},
-        "nvidia/nemotron-3-ultra-550b-a55b": {}
+        "nvidia/nemotron-3-ultra-550b-a55b": {},
+        "omniroute/auto/claude-sonnet": {},
+        "omniroute/auto/best-reasoning": {}
       }
     }
   },
@@ -140,7 +142,7 @@
   ],
   "meta": {
     "lastTouchedVersion": "2026.6.11",
-    "lastTouchedAt": "2026-08-08T15:21:36.405Z"
+    "lastTouchedAt": "2026-08-10T11:27:18.143Z"
   },
   "tools": {
     "web": {

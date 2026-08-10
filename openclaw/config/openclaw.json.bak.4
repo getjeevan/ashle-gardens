@@ -132,7 +132,7 @@
   ],
   "meta": {
     "lastTouchedVersion": "2026.6.11",
-    "lastTouchedAt": "2026-07-16T03:49:42.602Z"
+    "lastTouchedAt": "2026-08-08T15:14:00.493Z"
   },
   "tools": {
     "web": {
@@ -155,6 +155,32 @@
             "name": "gemma4:26b",
             "maxTokens": 16384,
             "contextWindow": 32768
+          }
+        ]
+      },
+      "omniroute": {
+        "baseUrl": "http://omniroute:20128/v1",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "auto/claude-sonnet",
+            "name": "OmniRoute Claude Sonnet (auto)",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 64000
+          },
+          {
+            "id": "auto/best-reasoning",
+            "name": "OmniRoute Best Reasoning (auto)",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 64000
           }
         ]
       }

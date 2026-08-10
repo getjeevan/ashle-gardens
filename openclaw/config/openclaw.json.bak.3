@@ -95,6 +95,13 @@
         "agentDir": "/home/node/.openclaw/agents/ai2india-editor",
         "models": {
           "anthropic/claude-sonnet-4-6": {}
+        },
+        "model": {
+          "primary": "omniroute/auto/claude-sonnet",
+          "fallbacks": [
+            "omniroute/auto/best-reasoning",
+            "anthropic/claude-sonnet-4-6"
+          ]
         }
       }
     ],
@@ -132,7 +139,7 @@
   ],
   "meta": {
     "lastTouchedVersion": "2026.6.11",
-    "lastTouchedAt": "2026-08-08T15:14:00.493Z"
+    "lastTouchedAt": "2026-08-08T15:14:40.488Z"
   },
   "tools": {
     "web": {

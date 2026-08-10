@@ -101,8 +101,7 @@
         "model": {
           "primary": "omniroute/auto/claude-sonnet",
           "fallbacks": [
-            "omniroute/auto/best-reasoning",
-            "anthropic/claude-sonnet-4-6"
+            "omniroute/auto/best-reasoning"
           ]
         }
       }
@@ -141,7 +140,7 @@
   ],
   "meta": {
     "lastTouchedVersion": "2026.6.11",
-    "lastTouchedAt": "2026-08-08T15:16:22.331Z"
+    "lastTouchedAt": "2026-08-08T15:21:36.405Z"
   },
   "tools": {
     "web": {
