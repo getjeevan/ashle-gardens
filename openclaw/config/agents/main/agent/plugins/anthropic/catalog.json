@@ -22,6 +22,12 @@
           },
           "contextWindow": 1000000,
           "maxTokens": 128000,
+          "thinkingLevelMap": {
+            "off": "low",
+            "minimal": "low",
+            "xhigh": "xhigh",
+            "max": "max"
+          },
           "mediaInput": {
             "image": {
               "maxSidePx": 2576,
@@ -78,6 +84,38 @@
             "image": {
               "maxSidePx": 1568,
               "preferredSidePx": 1568,
+              "tokenMode": "provider"
+            }
+          }
+        },
+        {
+          "id": "claude-mythos-5",
+          "name": "Claude Mythos 5",
+          "api": "anthropic-messages",
+          "baseUrl": "https://api.anthropic.com",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 10,
+            "output": 50,
+            "cacheRead": 1,
+            "cacheWrite": 12.5
+          },
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "thinkingLevelMap": {
+            "off": "low",
+            "minimal": "low",
+            "xhigh": "xhigh",
+            "max": "max"
+          },
+          "mediaInput": {
+            "image": {
+              "maxSidePx": 2576,
+              "preferredSidePx": 2576,
               "tokenMode": "provider"
             }
           }
@@ -182,6 +220,36 @@
             "image": {
               "maxSidePx": 1568,
               "preferredSidePx": 1568,
+              "tokenMode": "provider"
+            }
+          }
+        },
+        {
+          "id": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "api": "anthropic-messages",
+          "baseUrl": "https://api.anthropic.com",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cacheRead": 0.2,
+            "cacheWrite": 2.5
+          },
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "thinkingLevelMap": {
+            "xhigh": "xhigh",
+            "max": "max"
+          },
+          "mediaInput": {
+            "image": {
+              "maxSidePx": 2576,
+              "preferredSidePx": 2576,
               "tokenMode": "provider"
             }
           }

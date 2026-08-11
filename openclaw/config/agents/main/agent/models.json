@@ -4,6 +4,95 @@
       "baseUrl": "https://chatgpt.com/backend-api",
       "models": [
         {
+          "id": "gpt-5.6-sol",
+          "name": "GPT-5.6-Sol",
+          "api": "openai-chatgpt-responses",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 272000,
+          "maxTokens": 128000,
+          "compat": {
+            "supportsReasoningEffort": true,
+            "supportedReasoningEfforts": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max",
+              "ultra"
+            ],
+            "supportsUsageInStreaming": true
+          }
+        },
+        {
+          "id": "gpt-5.6-terra",
+          "name": "GPT-5.6-Terra",
+          "api": "openai-chatgpt-responses",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 272000,
+          "maxTokens": 128000,
+          "compat": {
+            "supportsReasoningEffort": true,
+            "supportedReasoningEfforts": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max",
+              "ultra"
+            ],
+            "supportsUsageInStreaming": true
+          }
+        },
+        {
+          "id": "gpt-5.6-luna",
+          "name": "GPT-5.6-Luna",
+          "api": "openai-chatgpt-responses",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 272000,
+          "maxTokens": 128000,
+          "compat": {
+            "supportsReasoningEffort": true,
+            "supportedReasoningEfforts": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ],
+            "supportsUsageInStreaming": true
+          }
+        },
+        {
           "id": "gpt-5.5",
           "name": "GPT-5.5",
           "api": "openai-chatgpt-responses",
@@ -22,12 +111,18 @@
           "maxTokens": 128000,
           "compat": {
             "supportsReasoningEffort": true,
+            "supportedReasoningEfforts": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ],
             "supportsUsageInStreaming": true
           }
         },
         {
           "id": "gpt-5.4",
-          "name": "gpt-5.4",
+          "name": "GPT-5.4",
           "api": "openai-chatgpt-responses",
           "reasoning": true,
           "input": [
@@ -44,6 +139,12 @@
           "maxTokens": 128000,
           "compat": {
             "supportsReasoningEffort": true,
+            "supportedReasoningEfforts": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ],
             "supportsUsageInStreaming": true
           }
         },
@@ -66,34 +167,18 @@
           "maxTokens": 128000,
           "compat": {
             "supportsReasoningEffort": true,
-            "supportsUsageInStreaming": true
-          }
-        },
-        {
-          "id": "gpt-5.3-codex",
-          "name": "gpt-5.3-codex",
-          "api": "openai-chatgpt-responses",
-          "reasoning": true,
-          "input": [
-            "text",
-            "image"
-          ],
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
-            "cacheWrite": 0
-          },
-          "contextWindow": 272000,
-          "maxTokens": 128000,
-          "compat": {
-            "supportsReasoningEffort": true,
+            "supportedReasoningEfforts": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ],
             "supportsUsageInStreaming": true
           }
         },
         {
           "id": "gpt-5.2",
-          "name": "gpt-5.2",
+          "name": "GPT-5.2",
           "api": "openai-chatgpt-responses",
           "reasoning": true,
           "input": [
@@ -110,6 +195,12 @@
           "maxTokens": 128000,
           "compat": {
             "supportsReasoningEffort": true,
+            "supportedReasoningEfforts": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ],
             "supportsUsageInStreaming": true
           }
         }
