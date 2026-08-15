@@ -101,8 +101,7 @@
         "model": {
           "primary": "omniroute/auto/claude-sonnet",
           "fallbacks": [
-            "omniroute/auto/best-reasoning",
-            "anthropic/claude-sonnet-4-6"
+            "omniroute/auto/best-reasoning"
           ]
         }
       }
@@ -117,7 +116,9 @@
       "models": {
         "ollama/gemma4:26b": {},
         "anthropic/claude-sonnet-4-6": {},
-        "nvidia/nemotron-3-ultra-550b-a55b": {}
+        "nvidia/nemotron-3-ultra-550b-a55b": {},
+        "omniroute/auto/claude-sonnet": {},
+        "omniroute/auto/best-reasoning": {}
       }
     }
   },
@@ -140,8 +141,8 @@
     }
   ],
   "meta": {
-    "lastTouchedVersion": "2026.6.11",
-    "lastTouchedAt": "2026-08-08T15:15:19.908Z"
+    "lastTouchedVersion": "2026.7.1",
+    "lastTouchedAt": "2026-08-15T15:56:54.034Z"
   },
   "tools": {
     "web": {
@@ -190,8 +191,39 @@
             ],
             "contextWindow": 1048576,
             "maxTokens": 64000
+          },
+          {
+            "id": "auto/smart",
+            "name": "OmniRoute Smart (auto)",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 64000
+          },
+          {
+            "id": "auto/chat",
+            "name": "OmniRoute Chat (auto)",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 64000
+          },
+          {
+            "id": "auto/best-chat",
+            "name": "OmniRoute Best Chat (auto)",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 64000
           }
-        ]
+        ],
+        "timeoutSeconds": 180
       }
     }
   },
@@ -203,6 +235,10 @@
       },
       "anthropic:apikey": {
         "provider": "anthropic",
+        "mode": "api_key"
+      },
+      "omniroute:manual": {
+        "provider": "omniroute",
         "mode": "api_key"
       }
     },
