@@ -151,7 +151,7 @@
   ],
   "meta": {
     "lastTouchedVersion": "2026.7.1",
-    "lastTouchedAt": "2026-08-15T15:57:40.476Z"
+    "lastTouchedAt": "2026-08-16T16:02:35.660Z"
   },
   "tools": {
     "web": {
@@ -279,6 +279,40 @@
         300000,
         1200000
       ]
+    }
+  },
+  "mcp": {
+    "servers": {
+      "higgsfield": {
+        "url": "https://mcp.higgsfield.ai/mcp",
+        "transport": "streamable-http",
+        "auth": "oauth",
+        "toolFilter": {
+          "include": [
+            "balance",
+            "generate_image",
+            "generate_image_batch",
+            "job_display",
+            "job_status",
+            "jobs_wait",
+            "media_confirm",
+            "media_import_url",
+            "media_upload",
+            "media_upload_widget",
+            "models_explore",
+            "outpaint_image",
+            "presets_show",
+            "reframe",
+            "remove_background",
+            "reveal_generation",
+            "show_generation_by_ids",
+            "show_generations",
+            "show_medias",
+            "show_plans_and_credits",
+            "upscale_image"
+          ]
+        }
+      }
     }
   }
 }

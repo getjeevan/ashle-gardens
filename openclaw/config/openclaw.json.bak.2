@@ -96,12 +96,18 @@
         "models": {
           "anthropic/claude-sonnet-4-6": {},
           "omniroute/auto/claude-sonnet": {},
-          "omniroute/auto/best-reasoning": {}
+          "omniroute/auto/best-reasoning": {},
+          "omniroute/auto/smart": {},
+          "omniroute/auto/chat": {},
+          "omniroute/auto/best-chat": {}
         },
         "model": {
-          "primary": "omniroute/auto/claude-sonnet",
+          "primary": "omniroute/auto/smart",
           "fallbacks": [
-            "omniroute/auto/best-reasoning"
+            "omniroute/auto/best-reasoning",
+            "omniroute/auto/chat",
+            "omniroute/auto/best-chat",
+            "omniroute/auto/claude-sonnet"
           ]
         }
       }
@@ -118,7 +124,10 @@
         "anthropic/claude-sonnet-4-6": {},
         "nvidia/nemotron-3-ultra-550b-a55b": {},
         "omniroute/auto/claude-sonnet": {},
-        "omniroute/auto/best-reasoning": {}
+        "omniroute/auto/best-reasoning": {},
+        "omniroute/auto/smart": {},
+        "omniroute/auto/chat": {},
+        "omniroute/auto/best-chat": {}
       }
     }
   },
@@ -142,7 +151,7 @@
   ],
   "meta": {
     "lastTouchedVersion": "2026.7.1",
-    "lastTouchedAt": "2026-08-15T15:56:54.034Z"
+    "lastTouchedAt": "2026-08-15T15:57:40.476Z"
   },
   "tools": {
     "web": {
