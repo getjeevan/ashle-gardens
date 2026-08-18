@@ -102,9 +102,12 @@
           "omniroute/auto/best-chat": {}
         },
         "model": {
-          "primary": "omniroute/auto/claude-sonnet",
+          "primary": "omniroute/auto/smart",
           "fallbacks": [
-            "omniroute/auto/best-reasoning"
+            "omniroute/auto/best-reasoning",
+            "omniroute/auto/chat",
+            "omniroute/auto/best-chat",
+            "omniroute/auto/claude-sonnet"
           ]
         }
       }
@@ -148,7 +151,7 @@
   ],
   "meta": {
     "lastTouchedVersion": "2026.7.1",
-    "lastTouchedAt": "2026-08-15T15:57:25.466Z"
+    "lastTouchedAt": "2026-08-16T15:57:47.228Z"
   },
   "tools": {
     "web": {
@@ -276,6 +279,15 @@
         300000,
         1200000
       ]
+    }
+  },
+  "mcp": {
+    "servers": {
+      "higgsfield": {
+        "url": "https://mcp.higgsfield.ai/mcp",
+        "transport": "streamable-http",
+        "auth": "oauth"
+      }
     }
   }
 }

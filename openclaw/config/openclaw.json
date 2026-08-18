@@ -99,7 +99,8 @@
           "omniroute/auto/best-reasoning": {},
           "omniroute/auto/smart": {},
           "omniroute/auto/chat": {},
-          "omniroute/auto/best-chat": {}
+          "omniroute/auto/best-chat": {},
+          "openrouter/auto": {}
         },
         "model": {
           "primary": "omniroute/auto/smart",
@@ -107,7 +108,8 @@
             "omniroute/auto/best-reasoning",
             "omniroute/auto/chat",
             "omniroute/auto/best-chat",
-            "omniroute/auto/claude-sonnet"
+            "omniroute/auto/claude-sonnet",
+            "openrouter/auto"
           ]
         }
       }
@@ -127,7 +129,8 @@
         "omniroute/auto/best-reasoning": {},
         "omniroute/auto/smart": {},
         "omniroute/auto/chat": {},
-        "omniroute/auto/best-chat": {}
+        "omniroute/auto/best-chat": {},
+        "openrouter/auto": {}
       }
     }
   },
@@ -151,7 +154,7 @@
   ],
   "meta": {
     "lastTouchedVersion": "2026.7.1",
-    "lastTouchedAt": "2026-08-16T16:02:35.660Z"
+    "lastTouchedAt": "2026-08-18T15:25:35.413Z"
   },
   "tools": {
     "web": {
